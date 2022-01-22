@@ -12,12 +12,14 @@ import { BestSellComponent } from '../shared/best-sell/best-sell.component';
 import { DealsDayComponent } from '../shared/deals-day/deals-day.component';
 import { TopSellComponent } from '../shared/top-sell/top-sell.component';
 import { MockCarouselService } from '../service/mock-carousel.service';
+import {CarouselModule} from "ngx-bootstrap/carousel";
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     HttpClientModule,
+    CarouselModule.forRoot(),
     RouterModule.forRoot([{ path: 'home', component: HomeComponent }]),
   ],
   providers: [MockCarouselService],
