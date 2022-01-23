@@ -30,3 +30,11 @@
     </div>
   </div>
 </section>
+
+<div *ngIf="features$ | async as features">
+  <div *ngFor="let item of features">
+    <h1>
+      {{ item.description }}
+    </h1>
+  </div>
+</div>

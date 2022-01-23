@@ -31,6 +31,70 @@ export class MockData implements InMemoryDbService {
       },
     ];
 
-    return { carousel: carouselDetails };
+    let carouselFeatured = [
+      {
+        description: 'Coffe & Tea',
+        id: 1,
+        url: '#1',
+        image: host + '/assets/imgs/slider/slider-4.png',
+      },
+      {
+        description: 'Coffe2 & Tea2',
+        id: 1,
+        url: '#1',
+        image: host + '/assets/imgs/slider/slider-4.png',
+      },
+      {
+        description: 'Coffe3 & Tea3',
+        id: 1,
+        url: '#1',
+        image: host + '/assets/imgs/slider/slider-4.png',
+      },
+      {
+        description: 'Coffe & Tea4',
+        id: 1,
+        url: '#1',
+        image: host + '/assets/imgs/slider/slider-4.png',
+      },
+      {
+        description: 'Coffe & Tea5',
+        id: 1,
+        url: '#1',
+        image: host + '/assets/imgs/slider/slider-4.png',
+      },
+      {
+        description: 'Coffe & Tea6',
+        id: 1,
+        url: '#1',
+        image: host + '/assets/imgs/slider/slider-4.png',
+      },
+      {
+        description: 'Coffe & Tea7',
+        id: 1,
+        url: '#1',
+        image: host + '/assets/imgs/slider/slider-4.png',
+      },
+      {
+        description: 'Coffe & Tea8',
+        id: 1,
+        url: '#1',
+        image: host + '/assets/imgs/slider/slider-4.png',
+      },
+      {
+        description: 'Coffe & Tea9',
+        id: 1,
+        url: '#1',
+        image: host + '/assets/imgs/slider/slider-4.png',
+      },
+      {
+        description: 'Coffe & Tea10',
+        id: 1,
+        url: '#1',
+        image: host + '/assets/imgs/slider/slider-4.png',
+      },
+
+    ];
+
+    return { carousel: carouselDetails, features:carouselFeatured };
   }
 }

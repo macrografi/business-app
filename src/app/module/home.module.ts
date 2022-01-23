@@ -12,8 +12,10 @@ import { BestSellComponent } from '../shared/best-sell/best-sell.component';
 import { DealsDayComponent } from '../shared/deals-day/deals-day.component';
 import { TopSellComponent } from '../shared/top-sell/top-sell.component';
 import { MockCarouselService } from '../service/mock-carousel.service';
+import { MockFeaturesCarouselService } from '../service/mock-features-carousel.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SwiperModule } from 'swiper/angular';
+
 
 @NgModule({
   imports: [
@@ -24,7 +26,7 @@ import { SwiperModule } from 'swiper/angular';
     SwiperModule,
     RouterModule.forRoot([{ path: 'home', component: HomeComponent }]),
   ],
-  providers: [MockCarouselService],
+  providers: [MockCarouselService, MockFeaturesCarouselService],
   declarations: [
     HomeComponent,
     HeroComponent,
