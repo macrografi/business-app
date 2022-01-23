@@ -12,10 +12,11 @@ import { AboutModule, ContactModule, HomeModule, ProductsModule } from './module
 import { HttpClientModule } from '@angular/common/http';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { MockData } from './mock/mock-data';
+import { FeatureState } from './state/feature.state';
 @NgModule({
   declarations: [AppComponent, HeaderComponent, FooterComponent],
   imports: [
-    NgxsModule.forRoot([HomeState]),
+    NgxsModule.forRoot([HomeState, FeatureState]),
     HomeModule,
     AboutModule,
     ProductsModule,

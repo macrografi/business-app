@@ -92,9 +92,8 @@ export class MockData implements InMemoryDbService {
         url: '#1',
         image: host + '/assets/imgs/slider/slider-4.png',
       },
-
     ];
 
-    return { carousel: carouselDetails, features:carouselFeatured };
+    return { carousel: carouselDetails, features: carouselFeatured };
   }
 }

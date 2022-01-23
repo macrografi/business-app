@@ -10,9 +10,9 @@ import { Features } from '../model/features';
 export class MockFeaturesCarouselService {
   constructor(private http: HttpClient) {}
 
-  private featuresBannerUrl = `${environment.mockBanner}`;
+  private featuresBannerUrl = `${environment.featuresBanner}`;
 
-  getBanners(): Observable<Features[]> {
+  getFeatureBanners(): Observable<Features[]> {
     return this.http.get<Features[]>(this.featuresBannerUrl);
   }
 }

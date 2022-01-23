@@ -1,9 +1,8 @@
 import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
 import { Select, Store } from '@ngxs/store';
-import { FeaturesState } from '../../state/features.state';
+import { FeatureState } from '../../state/feature.state';
 import { getFeatureCarousels } from '../../action/features-carousel.action';
 import { Observable } from 'rxjs';
-
 
 @Component({
   selector: 'app-featured',
@@ -13,8 +12,10 @@ import { Observable } from 'rxjs';
 })
 export class FeaturedComponent implements OnInit, OnDestroy {
   constructor(private store: Store) {}
-  @Select(FeaturesState.getFeatureList) features$: Observable<any> | undefined;
+  @Select(FeatureState.getFeatureList) features$: Observable<any> | undefined;
 
-  ngOnInit(): void {}
+  ngOnInit() {
+    return this.store.dispatch(new getFeatureCarousels());
+  }
   ngOnDestroy(): void {}
 }
