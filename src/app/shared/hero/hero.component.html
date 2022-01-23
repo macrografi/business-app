@@ -1,26 +1,28 @@
 <section class="home-slider position-relative mb-30" *ngIf="carousels$ | async as carousels">
-  <carousel>
-    <slide *ngFor="let item of carousels">
-      <div class="home-slide-cover mt-30">
-        <div class="hero-slider-1 style-4 dot-style-1 dot-style-1-position-1">
-          <div
-            class="single-hero-slider single-animation-wrap"
-            style="background-image: url(assets/imgs/slider/slider-1.png)"
-          >
-            <div class="slider-content">
-              <h1 class="display-2 mb-40">
-                {{ item.description }}
-              </h1>
-              <p class="mb-65">Sign up for the daily newsletter</p>
-              <form class="form-subcriber d-flex">
-                <input type="email" placeholder="Your emaill address" />
-                <button class="btn" type="submit">Subscribe</button>
-              </form>
-            </div>
+  <swiper
+    [slidesPerView]="1"
+    [spaceBetween]="50"
+    (swiper)="onSwiper($event)"
+    (slideChange)="onSlideChange()"
+    [navigation]="true"
+    [pagination]="{ clickable: true }"
+  >
+    <ng-template *ngFor="let item of carousels" swiperSlide>
+      <div class="slide hero-slider-1 mt-30">
+        <div
+          class="single-hero-slider single-animation-wrap"
+          [ngStyle]="{ 'background-image': 'url(' + item.image + ')' }"
+        >
+          <div class="slider-content">
+            <h1 class="display-2 mb-40">{{ item.description }}</h1>
+            <p class="mb-65">Sign up for the daily newsletter</p>
+            <form class="form-subcriber d-flex">
+              <input type="email" placeholder="Your emaill address" />
+              <button class="btn" type="submit">Subscribe</button>
+            </form>
           </div>
         </div>
-        <div class="slider-arrow hero-slider-1-arrow"></div>
       </div>
-    </slide>
-  </carousel>
+    </ng-template>
+  </swiper>
 </section>

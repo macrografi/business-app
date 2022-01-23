@@ -15,4 +15,5 @@ export class CarouselService {
   getBanners(): Observable<Carousel[]> {
     return this.http.get<Carousel[]>(this.bannerUrl);
   }
+
 }
