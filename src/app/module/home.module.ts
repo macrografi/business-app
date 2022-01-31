@@ -7,7 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HeroComponent } from '../shared/hero/hero.component';
 import { FeaturedComponent } from '../shared/featured/featured.component';
 import { CampaignComponent } from '../shared/campaign/campaign.component';
-import { PopulerProductComponent } from '../shared/populer-product/populer-product.component';
+import { PopularProductComponent } from '../shared/popular-product/popular-product.component';
 import { BestSellComponent } from '../shared/best-sell/best-sell.component';
 import { DealsDayComponent } from '../shared/deals-day/deals-day.component';
 import { TopSellComponent } from '../shared/top-sell/top-sell.component';
@@ -32,7 +32,7 @@ import { SwiperModule } from 'swiper/angular';
     HeroComponent,
     FeaturedComponent,
     CampaignComponent,
-    PopulerProductComponent,
+    PopularProductComponent,
     BestSellComponent,
     DealsDayComponent,
     TopSellComponent,
