@@ -7,4 +7,5 @@ export interface PopularProduct {
   mark?: string;
   price?: number;
   discount?: number;
+  category?: string;
 }

@@ -20,6 +20,7 @@ export class HeroComponent implements OnInit, OnDestroy {
     return this.store.dispatch(new GetCarousel());
   }
   ngOnDestroy(): void {}
+
   onSwiper(swiper: any) {
     console.log(swiper);
   }

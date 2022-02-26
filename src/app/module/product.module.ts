@@ -10,6 +10,7 @@ import { ShopProductComponent } from '../shared/shop-product/shop-product.compon
 import { ShopPaginationComponent } from '../shared/shop-pagination/shop-pagination.component';
 import { SidebarCategoryComponent } from '../shared/sidebar-category/sidebar-category.component';
 import { SidebarPriceComponent } from '../shared/sidebar-price/sidebar-price.component';
+import { TabsModule } from 'ngx-bootstrap/tabs';
 
 @NgModule({
   imports: [
@@ -22,6 +23,7 @@ import { SidebarPriceComponent } from '../shared/sidebar-price/sidebar-price.com
         component: ProductComponent,
       },
     ]),
+    TabsModule.forRoot(),
   ],
   providers: [],
   declarations: [

@@ -17,22 +17,20 @@
         id="carausel-10-columns-arrows"
       ></div>
     </div>
-    <div class="carausel-10-columns-cover position-relative">
-      <div class="carausel-10-columns" id="carausel-10-columns">
-        <div class="card-2 bg-9 wow animate__animated animate__fadeInUp" data-wow-delay=".1s">
-          <figure class="img-hover-scale overflow-hidden">
-            <a href="shop-grid-right.html"><img src="assets/imgs/shop/cat-13.png" alt="" /></a>
-          </figure>
-          <h6><a href="shop-grid-right.html">Cake & Milk</a></h6>
-          <span>26 items</span>
-        </div>
-      </div>
+    <div *ngIf="features$ | async as features">
+      <swiper [config]="swiperConfig" [navigation]="true">
+        <ng-template *ngFor="let item of features" swiperSlide>
+          <div class="card-2 bg-9 wow">
+            <figure class="img-hover-scale overflow-hidden">
+              <a href="#"><img src="{{ item.image }}" alt="" /></a>
+            </figure>
+            <h6>
+              <a href="#">{{ item.description }}</a>
+            </h6>
+            <span>{{ item.item }}</span>
+          </div>
+        </ng-template>
+      </swiper>
     </div>
   </div>
 </section>
-
-<div *ngIf="features$ | async as features">
-  <li *ngFor="let item of features">
-    {{ item.description }}
-  </li>
-</div>
