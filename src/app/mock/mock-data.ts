@@ -37,6 +37,7 @@ export class MockData implements InMemoryDbService {
         id: 1,
         url: '#1',
         item: 26,
+        class: 'bg-9',
         image: host + '/assets/imgs/shop/cat-13.png',
       },
       {
@@ -44,6 +45,7 @@ export class MockData implements InMemoryDbService {
         id: 2,
         url: '#1',
         item: 28,
+        class: 'bg-10',
         image: host + '/assets/imgs/shop/cat-12.png',
       },
       {
@@ -51,6 +53,7 @@ export class MockData implements InMemoryDbService {
         id: 3,
         url: '#1',
         item: 14,
+        class: 'bg-11',
         image: host + '/assets/imgs/shop/cat-11.png',
       },
       {
@@ -58,6 +61,7 @@ export class MockData implements InMemoryDbService {
         id: 4,
         url: '#1',
         item: 54,
+        class: 'bg-13',
         image: host + '/assets/imgs/shop/cat-9.png',
       },
       {
@@ -65,6 +69,7 @@ export class MockData implements InMemoryDbService {
         id: 5,
         url: '#1',
         item: 56,
+        class: 'bg-14',
         image: host + '/assets/imgs/shop/cat-3.png',
       },
       {
@@ -72,6 +77,7 @@ export class MockData implements InMemoryDbService {
         id: 6,
         url: '#1',
         item: 72,
+        class: 'bg-15',
         image: host + '/assets/imgs/shop/cat-1.png',
       },
       {
@@ -79,6 +85,7 @@ export class MockData implements InMemoryDbService {
         id: 7,
         url: '#1',
         item: 36,
+        class: 'bg-12',
         image: host + '/assets/imgs/shop/cat-2.png',
       },
       {
@@ -86,6 +93,7 @@ export class MockData implements InMemoryDbService {
         id: 8,
         url: '#1',
         item: 123,
+        class: 'bg-10',
         image: host + '/assets/imgs/shop/cat-4.png',
       },
       {
@@ -93,6 +101,7 @@ export class MockData implements InMemoryDbService {
         id: 9,
         url: '#1',
         item: 34,
+        class: 'bg-9',
         image: host + '/assets/imgs/shop/cat-5.png',
       },
       {
@@ -100,6 +109,7 @@ export class MockData implements InMemoryDbService {
         id: 10,
         url: '#1',
         item: 89,
+        class: 'bg-11',
         image: host + '/assets/imgs/shop/cat-14.png',
       },
       {
@@ -107,6 +117,7 @@ export class MockData implements InMemoryDbService {
         id: 11,
         url: '#1',
         item: 87,
+        class: 'bg-10',
         image: host + '/assets/imgs/shop/cat-15.png',
       },
     ];

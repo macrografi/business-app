@@ -20,7 +20,7 @@
     <div *ngIf="features$ | async as features">
       <swiper [config]="swiperConfig" [navigation]="true">
         <ng-template *ngFor="let item of features" swiperSlide>
-          <div class="card-2 bg-9 wow">
+          <div class="card-2 bg-9 wow {{ item.class }}">
             <figure class="img-hover-scale overflow-hidden">
               <a href="#"><img src="{{ item.image }}" alt="" /></a>
             </figure>

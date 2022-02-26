@@ -4,4 +4,5 @@ export interface Features {
   image?: string;
   url?: string;
   description?: string;
+  class: string;
 }
