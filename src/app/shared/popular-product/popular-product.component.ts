@@ -25,13 +25,7 @@ export class PopularProductComponent implements OnInit, OnDestroy {
     },
   ];
 
-  constructor(private store: Store) {
-    this.store
-      .select((state) => {
-        console.log('my state :', state.popularProducts);
-      })
-      .subscribe();
-  }
+  constructor(private store: Store) {}
 
   @Select(PopularProductState.getProductList) products$: Observable<any> | undefined;
 

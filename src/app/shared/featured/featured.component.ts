@@ -14,9 +14,13 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 })
 export class FeaturedComponent implements OnInit, OnDestroy {
   swiperConfig: any = {
-    slidesPerView: '8',
+    slidesPerView: '10',
     spaceBetween: 50,
     breakpoints: {
+      1200: {
+        spaceBetween: 20,
+        slidesPerView: '9',
+      },
       1024: {
         spaceBetween: 20,
         slidesPerView: '8',
