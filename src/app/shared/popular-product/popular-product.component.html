@@ -104,11 +104,11 @@
       </ul>
     </div>
     <tabset>
-      <tab *ngFor="let tabz of tabs" [heading]="tabz.title" class="links">
-        {{ tabz?.content }}
+      <tab *ngFor="let tabs of tabs" [heading]="tabs.title" class="links">
+        {{ tabs?.content }}
       </tab>
     </tabset>
-<!--    <div *ngIf="products$ | async as products">
+    <!--    <div *ngIf="products$ | async as products">
       <div *ngFor="let item of products">
         {{ item }}
       </div>

@@ -1,7 +1,14 @@
 import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
 import { Select, Store } from '@ngxs/store';
 import { PopularProductState } from '../../state/popular-product.state';
-import { GetPopularProduct } from '../../action/popular-product.action';
+import {
+  GetPopularProductCoffee,
+  GetPopularProductFruit,
+  GetPopularProductMeat,
+  GetPopularProductMilk,
+  GetPopularProductPet,
+  GetPopularProductVegetable,
+} from '../../action/popular-product.action';
 import { Observable } from 'rxjs';
 import { ITab } from '../../model/tab';
 
@@ -27,10 +34,38 @@ export class PopularProductComponent implements OnInit, OnDestroy {
 
   constructor(private store: Store) {}
 
-  @Select(PopularProductState.getProductList) products$: Observable<any> | undefined;
+  @Select(PopularProductState.getProductMilksList) milks$: Observable<any> | undefined;
+  @Select(PopularProductState.getProductCoffeeList) coffees$: Observable<any> | undefined;
+  @Select(PopularProductState.getProductPetsList) pets$: Observable<any> | undefined;
+  @Select(PopularProductState.getProductMeatsList) meats$: Observable<any> | undefined;
+  @Select(PopularProductState.getProductVegetablesList) vegetables$: Observable<any> | undefined;
+  @Select(PopularProductState.getProductFruitsList) fruits$: Observable<any> | undefined;
 
   ngOnInit() {
-    return this.store.dispatch(new GetPopularProduct());
+    this.getCoffee();
+    this.getPet();
+    this.getMeat();
+    this.getVegetable();
+    this.getFruit();
+    this.getMilk();
+  }
+  getMilk() {
+    return this.store.dispatch(new GetPopularProductMilk());
+  }
+  getCoffee() {
+    return this.store.dispatch(new GetPopularProductCoffee());
+  }
+  getPet() {
+    return this.store.dispatch(new GetPopularProductPet());
+  }
+  getMeat() {
+    return this.store.dispatch(new GetPopularProductMeat());
+  }
+  getVegetable() {
+    return this.store.dispatch(new GetPopularProductVegetable());
+  }
+  getFruit() {
+    return this.store.dispatch(new GetPopularProductFruit());
   }
   ngOnDestroy(): void {}
 }

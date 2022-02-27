@@ -3,5 +3,10 @@ export const environment = {
   /*  banner: 'https://banner-services.firebaseio.com',*/
   mockBanner: '/api/carousel',
   featuresBanner: '/api/features',
-  popularProduct: '/api/product',
+  popularProductMilk: '/api/productMilk',
+  popularProductCoffee: '/api/productCoffee',
+  popularProductPet: '/api/productPet',
+  popularProductMeat: '/api/productMeat',
+  popularProductVegetable: '/api/productVegetable',
+  popularProductFruit: '/api/productFruit',
 };

@@ -10,9 +10,34 @@ import { PopularProduct } from '../model/popular-product';
 export class MockPopularProductService {
   constructor(private http: HttpClient) {}
 
-  private popularProductUrl = `${environment.popularProduct}`;
+  private popularProductMilk = `${environment.popularProductMilk}`;
+  private popularProductCoffee = `${environment.popularProductCoffee}`;
+  private popularProductPet = `${environment.popularProductPet}`;
+  private popularProductMeat = `${environment.popularProductMeat}`;
+  private popularProductVegetable = `${environment.popularProductVegetable}`;
+  private popularProductFruit = `${environment.popularProductFruit}`;
 
-  getPopularProducts(): Observable<PopularProduct[]> {
-    return this.http.get<PopularProduct[]>(this.popularProductUrl);
+  getPopularProductsMilk(): Observable<PopularProduct[]> {
+    return this.http.get<PopularProduct[]>(this.popularProductMilk);
+  }
+
+  getPopularProductsCoffee(): Observable<PopularProduct[]> {
+    return this.http.get<PopularProduct[]>(this.popularProductCoffee);
+  }
+
+  getPopularProductsPet(): Observable<PopularProduct[]> {
+    return this.http.get<PopularProduct[]>(this.popularProductPet);
+  }
+
+  getPopularProductsMeat(): Observable<PopularProduct[]> {
+    return this.http.get<PopularProduct[]>(this.popularProductMeat);
+  }
+
+  getPopularProductsVegetable(): Observable<PopularProduct[]> {
+    return this.http.get<PopularProduct[]>(this.popularProductVegetable);
+  }
+
+  getPopularProductsFruit(): Observable<PopularProduct[]> {
+    return this.http.get<PopularProduct[]>(this.popularProductFruit);
   }
 }
