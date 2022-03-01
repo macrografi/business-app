@@ -1,6 +1,6 @@
 export interface PopularProduct {
   label?: string;
-  image?: string;
+  image?: [];
   article?: string;
   description?: string;
   starRate?: number;
