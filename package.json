@@ -18,6 +18,7 @@
     "@angular/platform-browser": "~13.1.0",
     "@angular/platform-browser-dynamic": "~13.1.0",
     "@angular/router": "~13.1.0",
+    "@ngxs-labs/dispatch-decorator": "^4.0.2",
     "@ngxs/router-plugin": "^3.6.2",
     "@ngxs/store": "^3.3.2",
     "angular-in-memory-web-api": "^0.11.0",

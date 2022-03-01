@@ -8,4 +8,5 @@ export interface PopularProduct {
   price?: number;
   discount?: number;
   category?: string;
+  class?: string;
 }

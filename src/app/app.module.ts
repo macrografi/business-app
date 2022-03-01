@@ -14,10 +14,12 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { MockData } from './mock/mock-data';
 import { FeatureState } from './state/feature.state';
 import { PopularProductState } from './state/popular-product.state';
+import { NgxsDispatchPluginModule } from '@ngxs-labs/dispatch-decorator';
 @NgModule({
   declarations: [AppComponent, HeaderComponent, FooterComponent],
   imports: [
     NgxsModule.forRoot([HomeState, FeatureState, PopularProductState]),
+    NgxsDispatchPluginModule.forRoot(),
     HomeModule,
     AboutModule,
     ProductsModule,
