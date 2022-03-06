@@ -15,19 +15,18 @@ import { MockCarouselService } from '../service/mock-carousel.service';
 import { MockFeaturesCarouselService } from '../service/mock-features-carousel.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SwiperModule } from 'swiper/angular';
-import {TabsModule} from "ngx-bootstrap/tabs";
-
+import { TabsModule } from 'ngx-bootstrap/tabs';
 
 @NgModule({
-    imports: [
-        CommonModule,
-        FormsModule,
-        HttpClientModule,
-        BrowserAnimationsModule,
-        SwiperModule,
-        RouterModule.forRoot([{path: 'home', component: HomeComponent}]),
-        TabsModule,
-    ],
+  imports: [
+    CommonModule,
+    FormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    SwiperModule,
+    RouterModule.forRoot([{ path: 'home', component: HomeComponent }]),
+    TabsModule,
+  ],
   providers: [MockCarouselService, MockFeaturesCarouselService],
   declarations: [
     HomeComponent,

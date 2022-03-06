@@ -15,8 +15,9 @@ import { MockData } from './mock/mock-data';
 import { FeatureState } from './state/feature.state';
 import { PopularProductState } from './state/popular-product.state';
 import { NgxsDispatchPluginModule } from '@ngxs-labs/dispatch-decorator';
+import { HeaderBottomComponent } from './shared/header/header-nav/header-bottom.component';
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent],
+  declarations: [AppComponent, HeaderComponent, HeaderBottomComponent, FooterComponent],
   imports: [
     NgxsModule.forRoot([HomeState, FeatureState, PopularProductState]),
     NgxsDispatchPluginModule.forRoot(),

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { Select, Store } from '@ngxs/store';
 import { PopularProductState } from '../../state/popular-product.state';
 import {
@@ -10,7 +10,7 @@ import {
   GetPopularProductVegetable,
 } from '../../action/popular-product.action';
 import { Observable } from 'rxjs';
-import { ITab } from '../../model/tab';
+import { TabsetComponent } from 'ngx-bootstrap/tabs';
 
 @Component({
   selector: 'app-popular-product',
@@ -19,18 +19,7 @@ import { ITab } from '../../model/tab';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PopularProductComponent implements OnInit, OnDestroy {
-  tabs: ITab[] = [
-    {
-      title: 'Dynamic Title 1',
-      content: 'Dynamic content 1',
-      customClass: 'customClass',
-    },
-    {
-      title: 'Dynamic Title 2',
-      content: 'Dynamic content 2',
-      customClass: 'customClass',
-    },
-  ];
+  @ViewChild('staticTabs', { static: false }) staticTabs?: TabsetComponent;
 
   constructor(private store: Store) {}
 
@@ -41,6 +30,12 @@ export class PopularProductComponent implements OnInit, OnDestroy {
   @Select(PopularProductState.getProductVegetablesList) vegetables$: Observable<any> | undefined;
   @Select(PopularProductState.getProductFruitsList) fruits$: Observable<any> | undefined;
 
+  selectTab(tabId: number) {
+    if (this.staticTabs?.tabs[tabId]) {
+      this.staticTabs.tabs[tabId].active = true;
+    }
+  }
+
   ngOnInit() {
     this.getCoffee();
     this.getPet();
@@ -49,6 +44,7 @@ export class PopularProductComponent implements OnInit, OnDestroy {
     this.getFruit();
     this.getMilk();
   }
+
   getMilk() {
     return this.store.dispatch(new GetPopularProductMilk());
   }
