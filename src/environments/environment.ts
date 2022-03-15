@@ -9,4 +9,5 @@ export const environment = {
   popularProductMeat: '/api/productMeat',
   popularProductVegetable: '/api/productVegetable',
   popularProductFruit: '/api/productFruit',
+  dealsOfTheDay: '/api/dealsDay',
 };

@@ -22,7 +22,7 @@
         <ng-template *ngFor="let item of features" swiperSlide>
           <div class="card-2 bg-9 wow {{ item.class }}">
             <figure class="img-hover-scale overflow-hidden">
-              <a href="#"><img src="{{ item.image }}" alt="" /></a>
+              <a href="#"><img src="{{ item.image }}" alt="{{ item.image }}" /></a>
             </figure>
             <h6>
               <a href="#">{{ item.description }}</a>

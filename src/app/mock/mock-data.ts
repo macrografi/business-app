@@ -800,6 +800,41 @@ export class MockData implements InMemoryDbService {
       },
     ];
 
+    let dealsOfTheDay = [
+      {
+        image: [host + '/assets/imgs/banner/banner-5.png'],
+        description: 'Seeds of Change Organic Quinoa, Brown, & Red Rice',
+        starRate: 4,
+        mark: 'NestFood',
+        price: 32.85,
+        discount: 33.8,
+      },
+      {
+        image: [host + '/assets/imgs/banner/banner-6.png'],
+        description: 'Perdue Simply Smart Organics Gluten Free',
+        starRate: 4,
+        mark: 'Old El Paso',
+        price: 32.85,
+        discount: 33.8,
+      },
+      {
+        image: [host + '/assets/imgs/banner/banner-7.png'],
+        description: 'Signature Wood-Fired Mushroom and Caramelized',
+        starRate: 3,
+        mark: 'Progresso',
+        price: 12.85,
+        discount: 13.8,
+      },
+      {
+        image: [host + '/assets/imgs/banner/banner-8.png'],
+        description: 'Simply Lemonade with Raspberry Juice',
+        starRate: 3,
+        mark: 'Yoplait',
+        price: 15.85,
+        discount: 16.8,
+      },
+    ];
+
     return {
       carousel: carouselDetails,
       features: carouselFeatured,
@@ -809,6 +844,7 @@ export class MockData implements InMemoryDbService {
       productMeat: popularProductMeat,
       productVegetable: popularProductVegetable,
       productFruit: popularProductFruit,
+      dealsDay: dealsOfTheDay,
     };
   }
 }

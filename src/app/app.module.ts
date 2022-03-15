@@ -16,10 +16,11 @@ import { FeatureState } from './state/feature.state';
 import { PopularProductState } from './state/popular-product.state';
 import { NgxsDispatchPluginModule } from '@ngxs-labs/dispatch-decorator';
 import { HeaderBottomComponent } from './shared/header/header-nav/header-bottom.component';
+import { DealsDayState } from './state/deals-day.state';
 @NgModule({
   declarations: [AppComponent, HeaderComponent, HeaderBottomComponent, FooterComponent],
   imports: [
-    NgxsModule.forRoot([HomeState, FeatureState, PopularProductState]),
+    NgxsModule.forRoot([HomeState, FeatureState, PopularProductState, DealsDayState]),
     NgxsDispatchPluginModule.forRoot(),
     HomeModule,
     AboutModule,
