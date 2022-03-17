@@ -30,7 +30,6 @@ export class MockData implements InMemoryDbService {
         image: host + '/assets/imgs/slider/slider-4.png',
       },
     ];
-
     let carouselFeatured = [
       {
         description: 'Cake & Milk',
@@ -121,7 +120,6 @@ export class MockData implements InMemoryDbService {
         image: host + '/assets/imgs/shop/cat-15.png',
       },
     ];
-
     let popularProductMilk = [
       {
         label: 'Hot',
@@ -234,7 +232,6 @@ export class MockData implements InMemoryDbService {
         class: '',
       },
     ];
-
     let popularProductCoffee = [
       {
         label: 'Hot',
@@ -347,7 +344,6 @@ export class MockData implements InMemoryDbService {
         class: '',
       },
     ];
-
     let popularProductPet = [
       {
         label: 'Hot',
@@ -460,7 +456,6 @@ export class MockData implements InMemoryDbService {
         class: '',
       },
     ];
-
     let popularProductMeat = [
       {
         label: 'Hot',
@@ -573,7 +568,6 @@ export class MockData implements InMemoryDbService {
         class: '',
       },
     ];
-
     let popularProductVegetable = [
       {
         label: 'Hot',
@@ -686,7 +680,6 @@ export class MockData implements InMemoryDbService {
         class: '',
       },
     ];
-
     let popularProductFruit = [
       {
         label: 'Hot',
@@ -799,7 +792,6 @@ export class MockData implements InMemoryDbService {
         class: '',
       },
     ];
-
     let dealsOfTheDay = [
       {
         image: [host + '/assets/imgs/banner/banner-5.png'],
@@ -834,6 +826,98 @@ export class MockData implements InMemoryDbService {
         discount: 16.8,
       },
     ];
+    let topSelling = [
+      {
+        image: [host + '/assets/imgs/shop/thumbnail-1.jpg'],
+        description: 'Nestle Original Coffee-Mate Coffee Creamer',
+        starRate: 4,
+        price: 32.85,
+        discount: 33.8,
+      },
+      {
+        image: [host + '/assets/imgs/shop/thumbnail-2.jpg'],
+        description: 'Nestle Original Coffee-Mate Coffee Creamer',
+        starRate: 4,
+        price: 32.85,
+        discount: 33.8,
+      },
+      {
+        image: [host + '/assets/imgs/shop/thumbnail-3.jpg'],
+        description: 'Nestle Original Coffee-Mate Coffee Creamer',
+        starRate: 4,
+        price: 32.85,
+        discount: 33.8,
+      },
+    ];
+    let trendingProducts = [
+      {
+        image: [host + '/assets/imgs/shop/thumbnail-4.jpg'],
+        description: 'Organic Cage-Free Grade A Large Brown Eggs',
+        starRate: 4,
+        price: 32.85,
+        discount: 33.8,
+      },
+      {
+        image: [host + '/assets/imgs/shop/thumbnail-5.jpg'],
+        description: 'Seeds of Change Organic Quinoa, Brown, & Red Rice',
+        starRate: 4,
+        price: 32.85,
+        discount: 33.8,
+      },
+      {
+        image: [host + '/assets/imgs/shop/thumbnail-6.jpg'],
+        description: 'Naturally Flavored Cinnamon Vanilla Light Roast Coffee',
+        starRate: 4,
+        price: 32.85,
+        discount: 33.8,
+      },
+    ];
+    let recentlyAdded = [
+      {
+        image: [host + '/assets/imgs/shop/thumbnail-7.jpg'],
+        description: 'Pepperidge Farm Farmhouse Hearty White Bread',
+        starRate: 4,
+        price: 32.85,
+        discount: 33.8,
+      },
+      {
+        image: [host + '/assets/imgs/shop/thumbnail-8.jpg'],
+        description: 'Organic Frozen Triple Berry Blend',
+        starRate: 4,
+        price: 32.85,
+        discount: 33.8,
+      },
+      {
+        image: [host + '/assets/imgs/shop/thumbnail-9.jpg'],
+        description: 'Oroweat Country Buttermilk Bread',
+        starRate: 4,
+        price: 32.85,
+        discount: 33.8,
+      },
+    ];
+    let topRated = [
+      {
+        image: [host + '/assets/imgs/shop/thumbnail-10.jpg'],
+        description: 'Foster Farms Takeout Crispy Classic Buffalo Wings',
+        starRate: 4,
+        price: 32.85,
+        discount: 33.8,
+      },
+      {
+        image: [host + '/assets/imgs/shop/thumbnail-11.jpg'],
+        description: 'Angie’s Boomchickapop Sweet & Salty Kettle Corn',
+        starRate: 4,
+        price: 32.85,
+        discount: 33.8,
+      },
+      {
+        image: [host + '/assets/imgs/shop/thumbnail-12.jpg'],
+        description: 'All Natural Italian-Style Chicken Meatballs',
+        starRate: 4,
+        price: 32.85,
+        discount: 33.8,
+      },
+    ];
 
     return {
       carousel: carouselDetails,
@@ -845,6 +929,10 @@ export class MockData implements InMemoryDbService {
       productVegetable: popularProductVegetable,
       productFruit: popularProductFruit,
       dealsDay: dealsOfTheDay,
+      topSell: topSelling,
+      trendProduct: trendingProducts,
+      recentAdded: recentlyAdded,
+      topRatedProduct: topRated,
     };
   }
 }

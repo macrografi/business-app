@@ -16,6 +16,10 @@ import { MockFeaturesCarouselService } from '../service/mock-features-carousel.s
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SwiperModule } from 'swiper/angular';
 import { TabsModule } from 'ngx-bootstrap/tabs';
+import { TopSellingComponent } from '../shared/top-sell/top-selling/top-selling.component';
+import { TrendingProductsComponent } from '../shared/top-sell/trending-products/trending-products.component';
+import { RecentlyAddedComponent } from '../shared/top-sell/recently-added/recently-added.component';
+import { TopRatedComponent } from '../shared/top-sell/top-rated/top-rated.component';
 
 @NgModule({
   imports: [
@@ -37,6 +41,10 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
     BestSellComponent,
     DealsDayComponent,
     TopSellComponent,
+    TopSellingComponent,
+    TrendingProductsComponent,
+    RecentlyAddedComponent,
+    TopRatedComponent,
   ],
 })
 export class HomeModule {}

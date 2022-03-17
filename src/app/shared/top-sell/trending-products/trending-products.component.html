@@ -1,0 +1,23 @@
+<h4 class="section-title style-1 mb-30 animated">Trending Products</h4>
+<div *ngIf="trends$ | async as products" class="product-list-small animated">
+  <article *ngFor="let item of products" class="row align-items-center hover-up">
+    <figure class="col-md-4 mb-0">
+      <a href="#"><img src="{{ item.image }}" alt="" /></a>
+    </figure>
+    <div class="col-md-8 mb-0">
+      <h6>
+        <a href="#">{{ item.description }}</a>
+      </h6>
+      <div class="product-rate-cover">
+        <div class="product-rate d-inline-block">
+          <div class="product-rating" style="width: 90%"></div>
+        </div>
+        <span class="font-small ml-5 text-muted"> ({{ item.starRate }})</span>
+      </div>
+      <div class="product-price">
+        <span>${{ item.price }}</span>
+        <span class="old-price">${{ item.discount }}</span>
+      </div>
+    </div>
+  </article>
+</div>
