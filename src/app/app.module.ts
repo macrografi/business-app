@@ -18,10 +18,18 @@ import { NgxsDispatchPluginModule } from '@ngxs-labs/dispatch-decorator';
 import { HeaderBottomComponent } from './shared/header/header-nav/header-bottom.component';
 import { DealsDayState } from './state/deals-day.state';
 import { TopProductState } from './state/top-product.state';
+import { DailyProductState } from './state/daily-product.state';
 @NgModule({
   declarations: [AppComponent, HeaderComponent, HeaderBottomComponent, FooterComponent],
   imports: [
-    NgxsModule.forRoot([HomeState, FeatureState, PopularProductState, DealsDayState, TopProductState]),
+    NgxsModule.forRoot([
+      HomeState,
+      FeatureState,
+      PopularProductState,
+      DealsDayState,
+      TopProductState,
+      DailyProductState,
+    ]),
     NgxsDispatchPluginModule.forRoot(),
     HomeModule,
     AboutModule,

@@ -1,11 +1,12 @@
-export interface PopularProduct {
+export class DailyProduct {
   label?: string;
   image?: [];
   article?: string;
   description?: string;
   starRate?: number;
+  mark?: string;
   price?: number;
   discount?: number;
-  sold?: number;
+  category?: string;
   class?: string;
 }

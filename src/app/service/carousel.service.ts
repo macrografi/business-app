@@ -10,10 +10,9 @@ import { Carousel } from '../model/carousel';
 export class CarouselService {
   constructor(private http: HttpClient) {}
 
-  private bannerUrl = `${environment.banner}`;
+  private bannerUrl = `${environment.mockBanner}`;
 
   getBanners(): Observable<Carousel[]> {
     return this.http.get<Carousel[]>(this.bannerUrl);
   }
-
 }

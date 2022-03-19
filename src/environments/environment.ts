@@ -14,4 +14,7 @@ export const environment = {
   trendingProducts: '/api/trendProduct',
   recentAdded: '/api/recentAdded',
   topRatedProduct: '/api/topRatedProduct',
+  dailyFeaturedProduct: '/api/dailyFeaturedProduct',
+  dailyPopularProduct: '/api/dailyPopularProduct',
+  dailyNewAddedProduct: '/api/dailyNewAddedProduct',
 };
