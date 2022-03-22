@@ -1089,6 +1089,119 @@ export class MockData implements InMemoryDbService {
         class: 'hot',
       },
     ];
+    let headerMenu = [
+      {
+        icon: '',
+        text: 'Home',
+        value: '#1',
+        subMenu: [],
+      },
+      {
+        icon: 'fi-rs-angle-down',
+        text: 'Fruit & Vegetables ',
+        value: '#1',
+        subMenu: [
+          {
+            text: 'Meat & Poultry',
+            value: '#1',
+          },
+          {
+            text: 'Fresh Vegetables',
+            value: '#2',
+          },
+          {
+            text: 'Herbs & Seasonings',
+            value: '#3',
+          },
+          {
+            text: 'Cuts & Sprouts',
+            value: '#4',
+          },
+          {
+            text: 'Exotic Fruits & Veggies',
+            value: '#5',
+          },
+          {
+            text: 'Packaged Produce',
+            value: '#6',
+          },
+        ],
+      },
+      {
+        icon: 'fi-rs-angle-down',
+        text: 'Breakfast & Dairy',
+        value: '#1',
+        subMenu: [
+          {
+            text: 'Milk & Flavoured Milk',
+            value: '#1',
+          },
+          {
+            text: 'Butter and Margarine',
+            value: '#2',
+          },
+          {
+            text: 'Eggs Substitutes',
+            value: '#3',
+          },
+          {
+            text: 'Marmalades',
+            value: '#4',
+          },
+          {
+            text: 'Sour Cream',
+            value: '#5',
+          },
+          {
+            text: 'Cheese',
+            value: '#6',
+          },
+        ],
+      },
+      {
+        icon: 'fi-rs-angle-down',
+        text: 'Meat & Seafood',
+        value: '#1',
+        subMenu: [
+          {
+            text: 'Breakfast Sausage',
+            value: '#1',
+          },
+          {
+            text: 'Dinner Sausage',
+            value: '#2',
+          },
+          {
+            text: 'Chicken',
+            value: '#3',
+          },
+          {
+            text: 'Sliced Deli Meat',
+            value: '#4',
+          },
+          {
+            text: 'Wild Caught Fillets',
+            value: '#5',
+          },
+          {
+            text: 'Crab and Shellfish',
+            value: '#6',
+          },
+        ],
+      },
+      {
+        icon: '',
+        text: 'Blog',
+        value: '#1',
+        subMenu: [],
+      },
+      {
+        icon: '',
+        text: 'Contact',
+        value: '#1',
+        subMenu: [],
+      },
+    ];
 
     return {
       carousel: carouselDetails,
@@ -1107,6 +1220,7 @@ export class MockData implements InMemoryDbService {
       dailyFeaturedProduct: dailyFeatured,
       dailyPopularProduct: dailyPopular,
       dailyNewAddedProduct: dailyNewAdded,
+      homeHeaderMenu: headerMenu,
     };
   }
 }

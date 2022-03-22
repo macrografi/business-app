@@ -17,4 +17,5 @@ export const environment = {
   dailyFeaturedProduct: '/api/dailyFeaturedProduct',
   dailyPopularProduct: '/api/dailyPopularProduct',
   dailyNewAddedProduct: '/api/dailyNewAddedProduct',
+  homeHeaderMenu: '/api/homeHeaderMenu',
 };

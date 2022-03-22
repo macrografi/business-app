@@ -19,6 +19,7 @@ import { HeaderBottomComponent } from './shared/header/header-nav/header-bottom.
 import { DealsDayState } from './state/deals-day.state';
 import { TopProductState } from './state/top-product.state';
 import { DailyProductState } from './state/daily-product.state';
+import { CategoryMenuState } from './state/category-menu.state';
 @NgModule({
   declarations: [AppComponent, HeaderComponent, HeaderBottomComponent, FooterComponent],
   imports: [
@@ -29,6 +30,7 @@ import { DailyProductState } from './state/daily-product.state';
       DealsDayState,
       TopProductState,
       DailyProductState,
+      CategoryMenuState,
     ]),
     NgxsDispatchPluginModule.forRoot(),
     HomeModule,

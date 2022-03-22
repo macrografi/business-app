@@ -1,4 +1,8 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { Select, Store } from '@ngxs/store';
+import { Observable } from 'rxjs';
+import { CategoryMenuState } from '../../../state/category-menu.state';
+import { GetCategoryMenu } from '../../../action/category-menu.action';
 
 @Component({
   selector: 'app-header-bottom',
@@ -10,7 +14,9 @@ export class HeaderBottomComponent implements OnInit {
   moreCategories: boolean = false;
   windowScroll: number = 0;
 
-  constructor() {}
+  constructor(private store: Store) {}
+
+  @Select(CategoryMenuState.getCategoryMenuList) menuItems$: Observable<any> | undefined;
 
   @HostListener('window:scroll', ['$event']) onScrollEvent($event: any) {
     this.windowScroll = $event.target['scrollingElement'].scrollTop;
@@ -19,6 +25,7 @@ export class HeaderBottomComponent implements OnInit {
   ngOnInit() {
     this.allCategoriesPopup = true;
     this.moreCategories = true;
+    return this.store.dispatch(new GetCategoryMenu());
   }
   clickCategories() {
     this.allCategoriesPopup = !this.allCategoriesPopup;
