@@ -2,17 +2,17 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import { Observable } from 'rxjs';
-import { Menu } from '../model/menu';
+import { HeaderTopMenu } from '../model/header-top-menu';
 
 @Injectable({
   providedIn: 'root',
 })
-export class CategoryMenuService {
+export class HeaderTopMenuService {
   constructor(private http: HttpClient) {}
 
-  private categoryMenuUrl = `${environment.categoryHeaderMenu}`;
+  private headerTopMenuUrl = `${environment.headerTopSmartMenu}`;
 
-  getCategoryMenu(): Observable<Menu[]> {
-    return this.http.get<Menu[]>(this.categoryMenuUrl);
+  getHeaderTopMenu(): Observable<HeaderTopMenu[]> {
+    return this.http.get<HeaderTopMenu[]>(this.headerTopMenuUrl);
   }
 }

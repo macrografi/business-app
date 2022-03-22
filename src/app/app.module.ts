@@ -20,8 +20,29 @@ import { DealsDayState } from './state/deals-day.state';
 import { TopProductState } from './state/top-product.state';
 import { DailyProductState } from './state/daily-product.state';
 import { CategoryMenuState } from './state/category-menu.state';
+import { FooterBannerComponent } from './shared/footer/footer-banner/footer-banner.component';
+import { FooterMenuComponent } from './shared/footer/footer-menu/footer-menu.component';
+import { FooterFeaturedComponent } from './shared/footer/footer-featured/footer-featured.component';
+import { FooterBottomComponent } from './shared/footer/footer-bottom/footer-bottom.component';
+import { FooterMenuState } from './state/footer-menu.state';
+import { HeaderTopComponent } from './shared/header/header-top/header-top.component';
+import { HeaderMiddleComponent } from './shared/header/header-middle/header-middle.component';
+import { HeaderTopMenuState } from './state/header-top-menu.state';
+import { HeaderTopInfoState } from './state/header-top-info.state';
+import {SwiperModule} from "swiper/angular";
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, HeaderBottomComponent, FooterComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    HeaderBottomComponent,
+    FooterComponent,
+    FooterBannerComponent,
+    FooterMenuComponent,
+    FooterFeaturedComponent,
+    FooterBottomComponent,
+    HeaderTopComponent,
+    HeaderMiddleComponent,
+  ],
   imports: [
     NgxsModule.forRoot([
       HomeState,
@@ -31,6 +52,9 @@ import { CategoryMenuState } from './state/category-menu.state';
       TopProductState,
       DailyProductState,
       CategoryMenuState,
+      FooterMenuState,
+      HeaderTopMenuState,
+      HeaderTopInfoState,
     ]),
     NgxsDispatchPluginModule.forRoot(),
     HomeModule,
@@ -41,11 +65,12 @@ import { CategoryMenuState } from './state/category-menu.state';
     NgxsLoggerPluginModule.forRoot(),
     BrowserModule,
     RouterModule.forRoot([
-      { path: '', redirectTo: 'home', pathMatch: 'full' },
-      { path: '**', redirectTo: 'home', pathMatch: 'full' },
+      {path: '', redirectTo: 'home', pathMatch: 'full'},
+      {path: '**', redirectTo: 'home', pathMatch: 'full'},
     ]),
     HttpClientModule,
     InMemoryWebApiModule.forRoot(MockData),
+    SwiperModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

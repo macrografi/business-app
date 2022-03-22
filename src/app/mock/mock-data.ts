@@ -1202,6 +1202,161 @@ export class MockData implements InMemoryDbService {
         subMenu: [],
       },
     ];
+    let footerMenu = [
+      {
+        text: 'Company',
+        value: '#1',
+        subMenu: [
+          {
+            text: 'About Us',
+            value: '#1',
+          },
+          {
+            text: 'Delivery Information',
+            value: '#2',
+          },
+          {
+            text: 'Privacy Policy',
+            value: '#3',
+          },
+          {
+            text: 'Terms & Conditions',
+            value: '#4',
+          },
+          {
+            text: 'Contact Us',
+            value: '#5',
+          },
+          {
+            text: 'Support Center',
+            value: '#6',
+          },
+          {
+            text: 'Careers',
+            value: '#6',
+          },
+        ],
+      },
+      {
+        text: 'Account',
+        value: '#1',
+        subMenu: [
+          {
+            text: 'Sign In',
+            value: '#1',
+          },
+          {
+            text: 'View Cart',
+            value: '#2',
+          },
+          {
+            text: 'My Wishlist',
+            value: '#3',
+          },
+          {
+            text: 'Track My Order',
+            value: '#4',
+          },
+          {
+            text: 'Help Ticket',
+            value: '#5',
+          },
+          {
+            text: 'Shipping Details',
+            value: '#6',
+          },
+          {
+            text: 'Compare products',
+            value: '#7',
+          },
+        ],
+      },
+      {
+        text: 'Corporate',
+        value: '#1',
+        subMenu: [
+          {
+            text: 'Become a Vendor',
+            value: '#1',
+          },
+          {
+            text: 'Affiliate Program',
+            value: '#2',
+          },
+          {
+            text: 'Farm Business',
+            value: '#3',
+          },
+          {
+            text: 'Farm Careers',
+            value: '#4',
+          },
+          {
+            text: 'Our Suppliers',
+            value: '#5',
+          },
+          {
+            text: 'Accessibility',
+            value: '#6',
+          },
+          {
+            text: 'Promotions',
+            value: '#7',
+          },
+        ],
+      },
+      {
+        text: 'Popular',
+        value: '#1',
+        subMenu: [
+          {
+            text: 'Milk & Flavoured Milk',
+            value: '#1',
+          },
+          {
+            text: 'Butter and Margarine',
+            value: '#2',
+          },
+          {
+            text: 'Eggs Substitutes',
+            value: '#3',
+          },
+          {
+            text: 'Marmalades',
+            value: '#4',
+          },
+          {
+            text: 'Sour Cream and Dips',
+            value: '#5',
+          },
+          {
+            text: 'Tea & Kombucha',
+            value: '#6',
+          },
+          {
+            text: 'Cheese',
+            value: '#7',
+          },
+        ],
+      },
+    ];
+    let headerTopMenu = [
+      { text: 'About Us', value: '#1' },
+      { text: 'My Account', value: '#2' },
+      { text: 'Wishlist', value: '#3' },
+      { text: 'Order Tracking', value: '#4' },
+    ];
+    let headerTopInfo = [
+      {
+        text: 'Secure delivery without contacting the courier',
+      },
+      {
+        text: 'Supper Value Deals - Save more with coupons',
+      },
+      {
+        text: 'Trendy 25silver jewelry, save up 35% off today',
+      },
+    ];
 
     return {
       carousel: carouselDetails,
@@ -1220,7 +1375,10 @@ export class MockData implements InMemoryDbService {
       dailyFeaturedProduct: dailyFeatured,
       dailyPopularProduct: dailyPopular,
       dailyNewAddedProduct: dailyNewAdded,
-      homeHeaderMenu: headerMenu,
+      categoryHeaderMenu: headerMenu,
+      footerBottomMenu: footerMenu,
+      headerTopSmartMenu: headerTopMenu,
+      headerTopInfoMessage: headerTopInfo,
     };
   }
 }
