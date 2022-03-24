@@ -1,0 +1,26 @@
+<div class="col">
+  <div *ngIf="cards$">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Title</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let card of cards$ | async">
+          <td>{{ card.id }}</td>
+          <td>{{ card.description }}</td>
+          <td>
+            <button class="btn btn-primary" (click)="editCard(card)">Edit</button>
+          </td>
+          <td>
+            <button class="btn btn-primary" (click)="deleteCard(card.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

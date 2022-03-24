@@ -1357,6 +1357,48 @@ export class MockData implements InMemoryDbService {
         text: 'Trendy 25silver jewelry, save up 35% off today',
       },
     ];
+    let card = [
+      {
+        userId: 1,
+        id: 1,
+        image: host + '/assets/imgs/shop/product-9-1.jpg',
+        description: '1-Seeds of Change Organic Quinoa, Brown',
+        starRate: 4,
+        price: 28.85,
+        stock: 55,
+        completed: true,
+      },
+      {
+        userId: 1,
+        id: 2,
+        image: host + '/assets/imgs/shop/product-9-1.jpg',
+        description: '2-Seeds of Change Organic Quinoa, Brown',
+        starRate: 4,
+        price: 28.85,
+        stock: 55,
+        completed: true,
+      },
+      {
+        userId: 2,
+        id: 3,
+        image: host + '/assets/imgs/shop/product-9-1.jpg',
+        description: '3-Seeds of Change Organic Quinoa, Brown',
+        starRate: 4,
+        price: 28.85,
+        stock: 55,
+        completed: false,
+      },
+      {
+        userId: 2,
+        id: 4,
+        image: host + '/assets/imgs/shop/product-9-1.jpg',
+        description: '4-Seeds of Change Organic Quinoa, Brown',
+        starRate: 4,
+        price: 28.85,
+        stock: 55,
+        completed: false,
+      },
+    ];
 
     return {
       carousel: carouselDetails,
@@ -1379,6 +1421,7 @@ export class MockData implements InMemoryDbService {
       footerBottomMenu: footerMenu,
       headerTopSmartMenu: headerTopMenu,
       headerTopInfoMessage: headerTopInfo,
+      addCard: card,
     };
   }
 }

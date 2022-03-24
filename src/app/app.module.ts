@@ -29,7 +29,12 @@ import { HeaderTopComponent } from './shared/header/header-top/header-top.compon
 import { HeaderMiddleComponent } from './shared/header/header-middle/header-middle.component';
 import { HeaderTopMenuState } from './state/header-top-menu.state';
 import { HeaderTopInfoState } from './state/header-top-info.state';
-import {SwiperModule} from "swiper/angular";
+import { SwiperModule } from 'swiper/angular';
+import { HeaderActionComponent } from './shared/header/header-middle/header-action/header-action.component';
+import { CardState } from './state/card.state';
+import { ExamStoreComponent } from './shared/exam-store/exam-store.component';
+import { FormComponent } from './shared/exam-store/form/form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,6 +47,9 @@ import {SwiperModule} from "swiper/angular";
     FooterBottomComponent,
     HeaderTopComponent,
     HeaderMiddleComponent,
+    HeaderActionComponent,
+    ExamStoreComponent,
+    FormComponent,
   ],
   imports: [
     NgxsModule.forRoot([
@@ -55,6 +63,7 @@ import {SwiperModule} from "swiper/angular";
       FooterMenuState,
       HeaderTopMenuState,
       HeaderTopInfoState,
+      CardState,
     ]),
     NgxsDispatchPluginModule.forRoot(),
     HomeModule,
@@ -65,12 +74,13 @@ import {SwiperModule} from "swiper/angular";
     NgxsLoggerPluginModule.forRoot(),
     BrowserModule,
     RouterModule.forRoot([
-      {path: '', redirectTo: 'home', pathMatch: 'full'},
-      {path: '**', redirectTo: 'home', pathMatch: 'full'},
+      { path: '', redirectTo: 'home', pathMatch: 'full' },
+      { path: '**', redirectTo: 'home', pathMatch: 'full' },
     ]),
     HttpClientModule,
     InMemoryWebApiModule.forRoot(MockData),
     SwiperModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
