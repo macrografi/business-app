@@ -3,6 +3,8 @@
 //swiper
 @import '../node_modules/swiper/swiper';
 @import '../node_modules/swiper/swiper-bundle.css';
+// regular style toast
+@import '~ngx-toastr/toastr';
 //globally
 @import './assets/scss/abstracts/variables';
 @import './assets/scss/abstracts/functions';
@@ -17,6 +19,7 @@
 @import './assets/scss/components/tabs';
 @import './assets/scss/components/misc';
 @import './assets/scss/components/banners';
+@import './assets/scss/components/toaster';
 @import './assets/scss/pages/page';
 @import './assets/scss/pages/shop';
 @import './assets/scss/pages/blog';
@@ -29,3 +32,5 @@
 @import './assets/scss/layout/spacing';
 @import './assets/scss/layout/responsive';
 @import './assets/scss/vendors/uicons-regular-straight';
+
+

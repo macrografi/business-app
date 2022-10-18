@@ -312,14 +312,16 @@
 
 .cart-dropdown-wrap {
   ul {
+    max-height: 320px;
+    margin: 0 20px 0 0;
     li {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      -webkit-flex-wrap: wrap;
+      /*      -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+      flex-wrap: wrap;*/
       margin: 0 0 20px;
 
       .shopping-cart-img {
@@ -553,7 +555,7 @@
   right: 0;
   top: calc(100% + 20px);
   z-index: 99;
-  width: 320px;
+  width: 340px;
   background-color: #fff;
   box-shadow: $box-shadown-2;
   padding: 30px 20px 27px;

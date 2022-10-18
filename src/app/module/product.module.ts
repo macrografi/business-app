@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ProductComponent } from '../product/product.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -11,6 +10,7 @@ import { ShopPaginationComponent } from '../shared/shop-pagination/shop-paginati
 import { SidebarCategoryComponent } from '../shared/sidebar-category/sidebar-category.component';
 import { SidebarPriceComponent } from '../shared/sidebar-price/sidebar-price.component';
 import { TabsModule } from 'ngx-bootstrap/tabs';
+import { ProductListComponent } from '../product/product-list/product-list.component';
 
 @NgModule({
   imports: [
@@ -19,15 +19,15 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
     HttpClientModule,
     RouterModule.forRoot([
       {
-        path: 'product',
-        component: ProductComponent,
+        path: 'products/:id',
+        component: ProductListComponent,
       },
     ]),
     TabsModule.forRoot(),
   ],
   providers: [],
   declarations: [
-    ProductComponent,
+    ProductListComponent,
     BreadcrumbComponent,
     ShopProductFilterComponent,
     ShopProductComponent,
