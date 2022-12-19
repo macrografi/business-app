@@ -1,6 +1,8 @@
 export interface Card {
   userId: number;
   id: number;
-  title: string;
+  description: string;
+  image: [];
+  price: number;
   completed: boolean;
 }

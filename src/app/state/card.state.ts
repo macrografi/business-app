@@ -6,14 +6,16 @@ import { tap } from 'rxjs/operators';
 import { AddCard, DeleteCard, GetCards } from '../action/card.action';
 import { Card } from '../model/card';
 
-export class TodoStateModel {
+export class CardStateModel {
   cards: Card[] | any;
+  selectedCard: Card | any;
 }
 
 @State<CardDefault>({
   name: 'card',
   defaults: {
     cards: [],
+    selectedCard: null,
   },
 })
 @Injectable()
@@ -22,6 +24,11 @@ export class CardState {
 
   @Selector() static getCardList(state: CardDefault) {
     return state.cards;
+  }
+
+  @Selector()
+  static getSelectedCard(state: CardStateModel) {
+    return state.selectedCard;
   }
 
   @Action(GetCards)
@@ -38,7 +45,7 @@ export class CardState {
   }
 
   @Action(AddCard)
-  addCCard({ getState, patchState }: StateContext<TodoStateModel>, { payload }: AddCard) {
+  addCard({ getState, patchState }: StateContext<CardStateModel>, { payload }: AddCard) {
     return this.cardService.addCard(payload).pipe(
       tap((result) => {
         const state = getState();
@@ -50,7 +57,7 @@ export class CardState {
   }
 
   @Action(DeleteCard)
-  deleteTodo({ getState, setState }: StateContext<TodoStateModel>, { id }: DeleteCard) {
+  deleteTodo({ getState, setState }: StateContext<CardStateModel>, { id }: DeleteCard) {
     return this.cardService.deleteCard(id).pipe(
       tap(() => {
         const state = getState();

@@ -11,6 +11,9 @@ import {
 } from '../../action/popular-product.action';
 import { Observable } from 'rxjs';
 import { TabsetComponent } from 'ngx-bootstrap/tabs';
+import { CardState } from '../../state/card.state';
+import { AddCard } from '../../action/card.action';
+import { Card } from '../../model/card';
 
 @Component({
   selector: 'app-popular-product',
@@ -22,13 +25,14 @@ export class PopularProductComponent implements OnInit, OnDestroy {
   @ViewChild('staticTabs', { static: false }) staticTabs?: TabsetComponent;
 
   constructor(private store: Store) {}
-
+  private cardItem: any;
   @Select(PopularProductState.getProductMilksList) milks$: Observable<any> | undefined;
   @Select(PopularProductState.getProductCoffeeList) coffees$: Observable<any> | undefined;
   @Select(PopularProductState.getProductPetsList) pets$: Observable<any> | undefined;
   @Select(PopularProductState.getProductMeatsList) meats$: Observable<any> | undefined;
   @Select(PopularProductState.getProductVegetablesList) vegetables$: Observable<any> | undefined;
   @Select(PopularProductState.getProductFruitsList) fruits$: Observable<any> | undefined;
+  @Select(CardState.getSelectedCard) selectedCard$: Observable<Card> | any;
 
   selectTab(tabId: number) {
     if (this.staticTabs?.tabs[tabId]) {
@@ -62,6 +66,25 @@ export class PopularProductComponent implements OnInit, OnDestroy {
   }
   getFruit() {
     return this.store.dispatch(new GetPopularProductFruit());
+  }
+  addToCard(payload: any) {
+    this.cardItem = payload;
+
+    const fillPayload = {
+      userId: this.cardItem.item.userId,
+      id: this.cardItem.item.id,
+      description: this.cardItem.item.description,
+      image: this.cardItem.item.image,
+      price: this.cardItem.item.price,
+      completed: false,
+    };
+
+    return this.store.dispatch(new AddCard(fillPayload)).subscribe(() => {
+      /*  this.messages$?.subscribe((res) => {
+        this.infoMessage = res[0].cardAddedSuccess;
+      });
+      this.success = this.toasterService.success(this.infoMessage);*/
+    });
   }
   ngOnDestroy(): void {}
 }

@@ -5,8 +5,22 @@ export class MockData implements InMemoryDbService {
   createDb() {
     //JSON data
     let cards = [
-      { userId: 1, id: 1, title: 'delectus aut autem', completed: false },
-      { userId: 1, id: 2, title: 'delectus aut autem2', completed: false },
+      {
+        userId: 1,
+        id: 1,
+        description: 'Seeds of Change Organic Quinoa, Brown, & Red Rice',
+        image: [host + '/assets/imgs/shop/product-11-1.jpg', host + '/assets/imgs/shop/product-11-2.jpg'],
+        price: 28.85,
+        completed: false,
+      },
+      {
+        userId: 1,
+        id: 2,
+        description: 'All Natural Italian-Style Chicken Meatballs',
+        image: [host + '/assets/imgs/shop/product-11-1.jpg', host + '/assets/imgs/shop/product-11-2.jpg'],
+        price: 28.85,
+        completed: false,
+      },
     ];
     let carouselDetails = [
       {
