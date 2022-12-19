@@ -4,6 +4,10 @@ let host = `${window.location.protocol}//${window.location.host}`;
 export class MockData implements InMemoryDbService {
   createDb() {
     //JSON data
+    let cards = [
+      { userId: 1, id: 1, title: 'delectus aut autem', completed: false },
+      { userId: 1, id: 2, title: 'delectus aut autem2', completed: false },
+    ];
     let carouselDetails = [
       {
         description: 'Banner 1 Desc',
@@ -1379,6 +1383,7 @@ export class MockData implements InMemoryDbService {
       footerBottomMenu: footerMenu,
       headerTopSmartMenu: headerTopMenu,
       headerTopInfoMessage: headerTopInfo,
+      card: cards,
     };
   }
 }

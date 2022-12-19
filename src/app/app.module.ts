@@ -29,7 +29,8 @@ import { HeaderTopComponent } from './shared/header/header-top/header-top.compon
 import { HeaderMiddleComponent } from './shared/header/header-middle/header-middle.component';
 import { HeaderTopMenuState } from './state/header-top-menu.state';
 import { HeaderTopInfoState } from './state/header-top-info.state';
-import {SwiperModule} from "swiper/angular";
+import { SwiperModule } from 'swiper/angular';
+import { CardState } from './state/card.state';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,6 +56,7 @@ import {SwiperModule} from "swiper/angular";
       FooterMenuState,
       HeaderTopMenuState,
       HeaderTopInfoState,
+      CardState,
     ]),
     NgxsDispatchPluginModule.forRoot(),
     HomeModule,
@@ -65,8 +67,8 @@ import {SwiperModule} from "swiper/angular";
     NgxsLoggerPluginModule.forRoot(),
     BrowserModule,
     RouterModule.forRoot([
-      {path: '', redirectTo: 'home', pathMatch: 'full'},
-      {path: '**', redirectTo: 'home', pathMatch: 'full'},
+      { path: '', redirectTo: 'home', pathMatch: 'full' },
+      { path: '**', redirectTo: 'home', pathMatch: 'full' },
     ]),
     HttpClientModule,
     InMemoryWebApiModule.forRoot(MockData),

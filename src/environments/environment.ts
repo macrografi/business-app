@@ -21,4 +21,5 @@ export const environment = {
   footerBottomMenu: '/api/footerBottomMenu',
   headerTopSmartMenu: '/api/headerTopSmartMenu',
   headerTopInfoMessage: '/api/headerTopInfoMessage',
+  card: '/api/card',
 };
