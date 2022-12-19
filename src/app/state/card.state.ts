@@ -4,18 +4,12 @@ import { CardDefault } from '../default/card.default';
 import { CardService } from '../service/card.service';
 import { tap } from 'rxjs/operators';
 import { AddCard, DeleteCard, GetCards } from '../action/card.action';
-import { Card } from '../model/card';
-
-export class CardStateModel {
-  cards: Card[] | any;
-  selectedCard: Card | any;
-}
+import { CardStateModel } from '../model/card-state';
 
 @State<CardDefault>({
   name: 'card',
   defaults: {
     cards: [],
-    selectedCard: null,
   },
 })
 @Injectable()
@@ -24,11 +18,6 @@ export class CardState {
 
   @Selector() static getCardList(state: CardDefault) {
     return state.cards;
-  }
-
-  @Selector()
-  static getSelectedCard(state: CardStateModel) {
-    return state.selectedCard;
   }
 
   @Action(GetCards)

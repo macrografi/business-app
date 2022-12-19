@@ -32,7 +32,7 @@ export class PopularProductComponent implements OnInit, OnDestroy {
   @Select(PopularProductState.getProductMeatsList) meats$: Observable<any> | undefined;
   @Select(PopularProductState.getProductVegetablesList) vegetables$: Observable<any> | undefined;
   @Select(PopularProductState.getProductFruitsList) fruits$: Observable<any> | undefined;
-  @Select(CardState.getSelectedCard) selectedCard$: Observable<Card> | any;
+  @Select(CardState.getCardList) cards$: Observable<Card> | any;
 
   selectTab(tabId: number) {
     if (this.staticTabs?.tabs[tabId]) {
