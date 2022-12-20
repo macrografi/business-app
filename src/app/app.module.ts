@@ -31,6 +31,8 @@ import { HeaderTopMenuState } from './state/header-top-menu.state';
 import { HeaderTopInfoState } from './state/header-top-info.state';
 import { SwiperModule } from 'swiper/angular';
 import { CardState } from './state/card.state';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {ToastrModule} from "ngx-toastr";
 @NgModule({
   declarations: [
     AppComponent,
@@ -73,6 +75,8 @@ import { CardState } from './state/card.state';
     HttpClientModule,
     InMemoryWebApiModule.forRoot(MockData),
     SwiperModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],
