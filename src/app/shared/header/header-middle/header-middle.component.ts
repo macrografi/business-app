@@ -14,13 +14,12 @@ import {ToastrService} from "ngx-toastr";
 export class HeaderMiddleComponent implements OnInit {
   totalPrice?: any = 0;
 
-  constructor(private store: Store, private toastr: ToastrService) {}
+  constructor(private store: Store) {}
 
   @Select(CardState.getCardList) cards$: Observable<any> | undefined;
 
   ngOnInit() {
 
-    this.showSuccess();
     this.getCard();
     this.cards$?.subscribe((val) => {
       let priceArray: any[] = [];
@@ -32,10 +31,6 @@ export class HeaderMiddleComponent implements OnInit {
         return parseFloat((acc + val).toFixed(2));
       }, 0);
     });
-  }
-
-  showSuccess() {
-    this.toastr.success('Hello world!', 'Toastr fun!');
   }
 
   private getCard() {

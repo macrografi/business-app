@@ -97,6 +97,8 @@ export class PopularProductComponent implements OnInit, OnDestroy {
         this.infoMessage = res[0].cardAddedSuccess;
       });
       this.success = this.toastrService.success(this.infoMessage);
+
+
     });
   }
   ngOnDestroy(): void {}
