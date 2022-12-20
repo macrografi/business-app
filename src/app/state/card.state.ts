@@ -3,8 +3,8 @@ import { Injectable } from '@angular/core';
 import { CardDefault } from '../default/card.default';
 import { CardService } from '../service/card.service';
 import { tap } from 'rxjs/operators';
-import { AddCard, DeleteCard, GetCards } from '../action/card.action';
 import { CardStateModel } from '../model/card-state';
+import {AddCard, DeleteCard, GetCards} from "../action/card.action";
 
 @State<CardDefault>({
   name: 'card',
