@@ -15,6 +15,7 @@ import { CardState } from '../../state/card.state';
 import { AddCard } from '../../action/card.action';
 import { Card } from '../../model/card';
 import { ToastrService } from 'ngx-toastr';
+import { InfoMessageState } from '../../state/info-message.state';
 
 @Component({
   selector: 'app-popular-product',
@@ -88,7 +89,7 @@ export class PopularProductComponent implements OnInit, OnDestroy {
       this.messages$?.subscribe((res) => {
         this.infoMessage = res[0].cardAddedSuccess;
       });
-      this.success = this.toasterService.success(this.infoMessage);
+      this.success = this.toastrService.success(this.infoMessage);
     });
   }
   ngOnDestroy(): void {}
