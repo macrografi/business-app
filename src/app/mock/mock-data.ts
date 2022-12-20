@@ -1375,6 +1375,12 @@ export class MockData implements InMemoryDbService {
         text: 'Trendy 25silver jewelry, save up 35% off today',
       },
     ];
+    let cardMessages = [
+      {
+        cardAddedSuccess: 'card added',
+        cardAddedFail: '!failed',
+      },
+    ];
 
     return {
       carousel: carouselDetails,
@@ -1398,6 +1404,7 @@ export class MockData implements InMemoryDbService {
       headerTopSmartMenu: headerTopMenu,
       headerTopInfoMessage: headerTopInfo,
       card: cards,
+      messages: cardMessages,
     };
   }
 }

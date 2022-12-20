@@ -9,7 +9,7 @@ import { InfoMessage } from '../model/info-message';
 })
 export class InfoMessageService {
   constructor(private http: HttpClient) {}
-  private messageUrl = `${environment.infoMessage}`;
+  private messageUrl = `${environment.messages}`;
 
   getMessages(): Observable<InfoMessage[]> {
     return this.http.get<InfoMessage[]>(this.messageUrl);

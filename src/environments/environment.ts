@@ -22,4 +22,5 @@ export const environment = {
   headerTopSmartMenu: '/api/headerTopSmartMenu',
   headerTopInfoMessage: '/api/headerTopInfoMessage',
   card: '/api/card',
+  messages: '/api/messages',
 };

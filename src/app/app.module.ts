@@ -31,8 +31,9 @@ import { HeaderTopMenuState } from './state/header-top-menu.state';
 import { HeaderTopInfoState } from './state/header-top-info.state';
 import { SwiperModule } from 'swiper/angular';
 import { CardState } from './state/card.state';
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {ToastrModule} from "ngx-toastr";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+import { InfoMessageState } from './state/info-message.state';
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,6 +60,7 @@ import {ToastrModule} from "ngx-toastr";
       HeaderTopMenuState,
       HeaderTopInfoState,
       CardState,
+      InfoMessageState,
     ]),
     NgxsDispatchPluginModule.forRoot(),
     HomeModule,

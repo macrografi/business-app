@@ -16,6 +16,7 @@ import { AddCard } from '../../action/card.action';
 import { Card } from '../../model/card';
 import { ToastrService } from 'ngx-toastr';
 import { InfoMessageState } from '../../state/info-message.state';
+import {GetInfoMessage} from "../../action/info-message.action";
 
 @Component({
   selector: 'app-popular-product',
@@ -27,9 +28,11 @@ export class PopularProductComponent implements OnInit, OnDestroy {
   private cardItem: any;
   private success: any;
   private infoMessage: any;
+
   @ViewChild('staticTabs', { static: false }) staticTabs?: TabsetComponent;
 
   constructor(private store: Store, private toastrService: ToastrService) {}
+
   @Select(InfoMessageState.getMessageList) messages$: Observable<any> | undefined;
   @Select(PopularProductState.getProductMilksList) milks$: Observable<any> | undefined;
   @Select(PopularProductState.getProductCoffeeList) coffees$: Observable<any> | undefined;
@@ -52,6 +55,7 @@ export class PopularProductComponent implements OnInit, OnDestroy {
     this.getVegetable();
     this.getFruit();
     this.getMilk();
+    this.getMessage()
   }
 
   getMilk() {
@@ -72,7 +76,9 @@ export class PopularProductComponent implements OnInit, OnDestroy {
   getFruit() {
     return this.store.dispatch(new GetPopularProductFruit());
   }
-
+  getMessage(){
+    return this.store.dispatch(new GetInfoMessage());
+  }
   addToCard(payload: any) {
     this.cardItem = payload;
 
@@ -87,6 +93,7 @@ export class PopularProductComponent implements OnInit, OnDestroy {
 
     return this.store.dispatch(new AddCard(fillPayload)).subscribe(() => {
       this.messages$?.subscribe((res) => {
+        console.log(res);
         this.infoMessage = res[0].cardAddedSuccess;
       });
       this.success = this.toastrService.success(this.infoMessage);
