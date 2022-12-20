@@ -22,10 +22,11 @@ import { Card } from '../../model/card';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PopularProductComponent implements OnInit, OnDestroy {
+  private cardItem: any;
   @ViewChild('staticTabs', { static: false }) staticTabs?: TabsetComponent;
 
   constructor(private store: Store) {}
-  private cardItem: any;
+
   @Select(PopularProductState.getProductMilksList) milks$: Observable<any> | undefined;
   @Select(PopularProductState.getProductCoffeeList) coffees$: Observable<any> | undefined;
   @Select(PopularProductState.getProductPetsList) pets$: Observable<any> | undefined;
@@ -67,6 +68,7 @@ export class PopularProductComponent implements OnInit, OnDestroy {
   getFruit() {
     return this.store.dispatch(new GetPopularProductFruit());
   }
+
   addToCard(payload: any) {
     this.cardItem = payload;
 
