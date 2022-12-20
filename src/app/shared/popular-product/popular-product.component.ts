@@ -14,6 +14,7 @@ import { TabsetComponent } from 'ngx-bootstrap/tabs';
 import { CardState } from '../../state/card.state';
 import { AddCard } from '../../action/card.action';
 import { Card } from '../../model/card';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-popular-product',
@@ -23,10 +24,12 @@ import { Card } from '../../model/card';
 })
 export class PopularProductComponent implements OnInit, OnDestroy {
   private cardItem: any;
+  private success: any;
+  private infoMessage: any;
   @ViewChild('staticTabs', { static: false }) staticTabs?: TabsetComponent;
 
-  constructor(private store: Store) {}
-
+  constructor(private store: Store, private toastrService: ToastrService) {}
+  @Select(InfoMessageState.getMessageList) messages$: Observable<any> | undefined;
   @Select(PopularProductState.getProductMilksList) milks$: Observable<any> | undefined;
   @Select(PopularProductState.getProductCoffeeList) coffees$: Observable<any> | undefined;
   @Select(PopularProductState.getProductPetsList) pets$: Observable<any> | undefined;
@@ -82,10 +85,10 @@ export class PopularProductComponent implements OnInit, OnDestroy {
     };
 
     return this.store.dispatch(new AddCard(fillPayload)).subscribe(() => {
-      /*  this.messages$?.subscribe((res) => {
+      this.messages$?.subscribe((res) => {
         this.infoMessage = res[0].cardAddedSuccess;
       });
-      this.success = this.toasterService.success(this.infoMessage);*/
+      this.success = this.toasterService.success(this.infoMessage);
     });
   }
   ngOnDestroy(): void {}
