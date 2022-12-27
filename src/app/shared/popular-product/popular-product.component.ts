@@ -16,7 +16,7 @@ import { AddCard } from '../../action/card.action';
 import { Card } from '../../model/card';
 import { ToastrService } from 'ngx-toastr';
 import { InfoMessageState } from '../../state/info-message.state';
-import {GetInfoMessage} from "../../action/info-message.action";
+import { GetInfoMessage } from '../../action/info-message.action';
 
 @Component({
   selector: 'app-popular-product',
@@ -55,7 +55,7 @@ export class PopularProductComponent implements OnInit, OnDestroy {
     this.getVegetable();
     this.getFruit();
     this.getMilk();
-    this.getMessage()
+    this.getMessage();
   }
 
   getMilk() {
@@ -76,7 +76,7 @@ export class PopularProductComponent implements OnInit, OnDestroy {
   getFruit() {
     return this.store.dispatch(new GetPopularProductFruit());
   }
-  getMessage(){
+  getMessage() {
     return this.store.dispatch(new GetInfoMessage());
   }
   addToCard(payload: any) {
@@ -97,8 +97,6 @@ export class PopularProductComponent implements OnInit, OnDestroy {
         this.infoMessage = res[0].cardAddedSuccess;
       });
       this.success = this.toastrService.success(this.infoMessage);
-
-
     });
   }
   ngOnDestroy(): void {}
