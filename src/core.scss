@@ -3,10 +3,10 @@
 //swiper
 @import '../node_modules/swiper/swiper';
 @import '../node_modules/swiper/swiper-bundle.css';
-
 // regular style toast
 @import 'ngx-toastr/toastr';
-
+//perfect scroll bar
+@import '~perfect-scrollbar/css/perfect-scrollbar.css';
 //globally
 @import './assets/scss/abstracts/variables';
 @import './assets/scss/abstracts/functions';

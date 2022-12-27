@@ -66,24 +66,30 @@
               </a>
               <a><span class="lable">Cart</span></a>
               <div class="cart-dropdown-wrap cart-dropdown-hm2">
-                <ul *ngIf="cards$ | async as cards">
-                  <li *ngFor="let item of cards" class="d-flex flex-row">
-                    <div class="shopping-cart-img">
-                      <a><img alt="Nest" src="{{ item.image[0] }}" /></a>
-                    </div>
-                    <div class="position-relative">
-                      <div class="shopping-cart-title">
-                        <h4>
-                          <a>{{ item.description }}</a>
-                        </h4>
-                        <h4><span>1 × </span>${{ item.price }}</h4>
+                <perfect-scrollbar [perfectScrollbar]="config" [scrollIndicators]="true" style="max-height: 400px">
+                  <ul class="card-holder" *ngIf="cards$ | async as cards">
+                    <li *ngFor="let item of cards" class="d-flex flex-row">
+                      <div class="shopping-cart-img">
+                        <a><img alt="Nest" src="{{ item.image[0] }}" /></a>
                       </div>
-                      <div class="shopping-cart-delete">
-                        <a><i class="fi-rs-cross-small"></i></a>
+                      <div class="position-relative">
+                        <div class="shopping-cart-title">
+                          <h4>
+                            <a>{{ item.description }}</a>
+                          </h4>
+                          <h4>
+                            <span>1 × </span>${{ item.price }}
+                          </h4>
+                        </div>
+                        <div class="shopping-cart-delete">
+                          <a>
+                            <i class="fi-rs-cross-small"></i>
+                          </a>
+                        </div>
                       </div>
-                    </div>
-                  </li>
-                </ul>
+                    </li>
+                  </ul>
+                </perfect-scrollbar>
                 <div class="shopping-cart-footer">
                   <div class="shopping-cart-total" *ngIf="cards$ | async as cards">
                     <h4>

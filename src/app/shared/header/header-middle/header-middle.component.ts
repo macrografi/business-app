@@ -1,9 +1,10 @@
-import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
-import {Select, Store} from '@ngxs/store';
-import {Observable} from 'rxjs';
-import {CardState} from '../../../state/card.state';
-import {GetCards} from '../../../action/card.action';
-import {ToastrService} from "ngx-toastr";
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { Select, Store } from '@ngxs/store';
+import { Observable } from 'rxjs';
+import { CardState } from '../../../state/card.state';
+import { GetCards } from '../../../action/card.action';
+import { ToastrService } from 'ngx-toastr';
+import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 
 @Component({
   selector: 'app-header-middle',
@@ -13,13 +14,13 @@ import {ToastrService} from "ngx-toastr";
 })
 export class HeaderMiddleComponent implements OnInit {
   totalPrice?: any = 0;
+  public config: PerfectScrollbarConfigInterface = {};
 
   constructor(private store: Store) {}
 
   @Select(CardState.getCardList) cards$: Observable<any> | undefined;
 
   ngOnInit() {
-
     this.getCard();
     this.cards$?.subscribe((val) => {
       let priceArray: any[] = [];

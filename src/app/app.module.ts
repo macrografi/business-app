@@ -34,6 +34,16 @@ import { CardState } from './state/card.state';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { InfoMessageState } from './state/info-message.state';
+import {
+  PERFECT_SCROLLBAR_CONFIG,
+  PerfectScrollbarConfigInterface,
+  PerfectScrollbarModule,
+} from 'ngx-perfect-scrollbar';
+
+const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
+  suppressScrollX: true,
+};
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -79,8 +89,14 @@ import { InfoMessageState } from './state/info-message.state';
     SwiperModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
+    PerfectScrollbarModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: PERFECT_SCROLLBAR_CONFIG,
+      useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
