@@ -65,7 +65,7 @@
                 <span class="pro-count blue">2</span>
               </a>
               <a><span class="lable">Cart</span></a>
-              <div *ngIf="cards$ | async as cards" class="cart-dropdown-wrap cart-dropdown-hm2" [ngClass]="cards.length > 0 ? 'd-block' : 'd-none'">
+              <div *ngIf="cards$ | async as cards" class="cart-dropdown-wrap cart-dropdown-hm2" [ngClass]="cards.length > 0 ? '' : 'd-none'">
                 <perfect-scrollbar [perfectScrollbar]="config" [scrollIndicators]="true" style="max-height: 400px">
                   <ul class="card-holder">
                     <li *ngFor="let item of cards" class="d-flex flex-row">
