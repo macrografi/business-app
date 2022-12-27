@@ -2,9 +2,10 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Select, Store } from '@ngxs/store';
 import { Observable } from 'rxjs';
 import { CardState } from '../../../state/card.state';
-import { GetCards } from '../../../action/card.action';
+import { DeleteCard, GetCards } from '../../../action/card.action';
 import { ToastrService } from 'ngx-toastr';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+import { InfoMessageState } from '../../../state/info-message.state';
 
 @Component({
   selector: 'app-header-middle',
@@ -14,6 +15,7 @@ import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 })
 export class HeaderMiddleComponent implements OnInit {
   totalPrice?: any = 0;
+  isLength?: boolean = false;
   public config: PerfectScrollbarConfigInterface = {};
 
   constructor(private store: Store) {}
@@ -28,6 +30,10 @@ export class HeaderMiddleComponent implements OnInit {
         return priceArray.push(value.price);
       });
 
+      if (val.length > 0) {
+        this.isLength = true;
+      }
+
       this.totalPrice = priceArray.reduce((acc, val) => {
         return parseFloat((acc + val).toFixed(2));
       }, 0);
@@ -36,5 +42,9 @@ export class HeaderMiddleComponent implements OnInit {
 
   private getCard() {
     return this.store.dispatch(new GetCards());
+  }
+  deleteCard(id: any) {
+    //console.log(id);
+    return this.store.dispatch(new DeleteCard(id));
   }
 }

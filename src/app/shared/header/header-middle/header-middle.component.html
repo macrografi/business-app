@@ -65,9 +65,9 @@
                 <span class="pro-count blue">2</span>
               </a>
               <a><span class="lable">Cart</span></a>
-              <div class="cart-dropdown-wrap cart-dropdown-hm2">
+              <div *ngIf="cards$ | async as cards" class="cart-dropdown-wrap cart-dropdown-hm2" [ngClass]="cards.length > 0 ? 'd-block' : 'd-none'">
                 <perfect-scrollbar [perfectScrollbar]="config" [scrollIndicators]="true" style="max-height: 400px">
-                  <ul class="card-holder" *ngIf="cards$ | async as cards">
+                  <ul class="card-holder">
                     <li *ngFor="let item of cards" class="d-flex flex-row">
                       <div class="shopping-cart-img">
                         <a><img alt="Nest" src="{{ item.image[0] }}" /></a>
@@ -77,12 +77,10 @@
                           <h4>
                             <a>{{ item.description }}</a>
                           </h4>
-                          <h4>
-                            <span>1 × </span>${{ item.price }}
-                          </h4>
+                          <h4><span>1 × </span>${{ item.price }}</h4>
                         </div>
                         <div class="shopping-cart-delete">
-                          <a>
+                          <a (click)="deleteCard(item.id)">
                             <i class="fi-rs-cross-small"></i>
                           </a>
                         </div>

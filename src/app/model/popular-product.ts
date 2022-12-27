@@ -1,4 +1,5 @@
 export interface PopularProduct {
+  id?: number;
   label?: string;
   image?: [];
   article?: string;

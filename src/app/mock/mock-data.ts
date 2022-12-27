@@ -140,6 +140,7 @@ export class MockData implements InMemoryDbService {
     ];
     let popularProductMilk = [
       {
+        id: 1,
         label: 'Hot',
         image: [host + '/assets/imgs/shop/product-11-1.jpg', host + '/assets/imgs/shop/product-11-2.jpg'],
         article: 'Snack',
@@ -151,6 +152,7 @@ export class MockData implements InMemoryDbService {
         class: 'hot',
       },
       {
+        id: 2,
         label: 'Sale',
         image: [host + '/assets/imgs/shop/product-12-1.jpg', host + '/assets/imgs/shop/product-12-2.jpg'],
         article: 'Hodo Foods',
@@ -162,6 +164,7 @@ export class MockData implements InMemoryDbService {
         class: 'sale',
       },
       {
+        id: 3,
         label: 'New',
         image: [host + '/assets/imgs/shop/product-1-1.jpg', host + '/assets/imgs/shop/product-1-2.jpg'],
         article: 'Snack',
@@ -173,6 +176,7 @@ export class MockData implements InMemoryDbService {
         class: 'new',
       },
       {
+        id: 4,
         label: '',
         image: [host + '/assets/imgs/shop/product-14-1.jpg', host + '/assets/imgs/shop/product-14-2.jpg'],
         article: 'Vegetables',
@@ -184,6 +188,7 @@ export class MockData implements InMemoryDbService {
         class: '',
       },
       {
+        id: 5,
         label: '-14%',
         image: [host + '/assets/imgs/shop/product-15-1.jpg', host + '/assets/imgs/shop/product-15-2.jpg'],
         article: 'Pet Foods',
@@ -195,6 +200,7 @@ export class MockData implements InMemoryDbService {
         class: 'best',
       },
       {
+        id: 6,
         label: '',
         image: [host + '/assets/imgs/shop/product-16-1.jpg', host + '/assets/imgs/shop/product-16-2.jpg'],
         article: 'Hodo Foods',
@@ -206,6 +212,7 @@ export class MockData implements InMemoryDbService {
         class: '',
       },
       {
+        id: 7,
         label: '',
         image: [host + '/assets/imgs/shop/product-7-1.jpg', host + '/assets/imgs/shop/product-7-2.jpg'],
         article: 'Meats',
@@ -217,6 +224,7 @@ export class MockData implements InMemoryDbService {
         class: '',
       },
       {
+        id: 8,
         label: 'Sale',
         image: [host + '/assets/imgs/shop/product-8-1.jpg', host + '/assets/imgs/shop/product-8-2.jpg'],
         article: 'Snack',
@@ -228,6 +236,7 @@ export class MockData implements InMemoryDbService {
         class: 'sale',
       },
       {
+        id: 9,
         label: 'Hot',
         image: [host + '/assets/imgs/shop/product-9-1.jpg', host + '/assets/imgs/shop/product-9-2.jpg'],
         article: 'Coffes',
@@ -239,6 +248,7 @@ export class MockData implements InMemoryDbService {
         class: 'hot',
       },
       {
+        id: 10,
         label: '',
         image: [host + '/assets/imgs/shop/product-10-1.jpg', host + '/assets/imgs/shop/product-10-2.jpg'],
         article: 'Cream',
@@ -252,6 +262,7 @@ export class MockData implements InMemoryDbService {
     ];
     let popularProductCoffee = [
       {
+        id: 11,
         label: 'Hot',
         image: [host + '/assets/imgs/shop/product-1-1.jpg', host + '/assets/imgs/shop/product-1-2.jpg'],
         article: 'Snack',
@@ -263,6 +274,7 @@ export class MockData implements InMemoryDbService {
         class: 'hot',
       },
       {
+        id: 12,
         label: 'Sale',
         image: [host + '/assets/imgs/shop/product-2-1.jpg', host + '/assets/imgs/shop/product-2-2.jpg'],
         article: 'Hodo Foods',
@@ -274,6 +286,7 @@ export class MockData implements InMemoryDbService {
         class: 'sale',
       },
       {
+        id: 13,
         label: 'New',
         image: [host + '/assets/imgs/shop/product-3-1.jpg', host + '/assets/imgs/shop/product-3-2.jpg'],
         article: 'Snack',
@@ -285,6 +298,7 @@ export class MockData implements InMemoryDbService {
         class: 'new',
       },
       {
+        id: 14,
         label: '',
         image: [host + '/assets/imgs/shop/product-4-1.jpg', host + '/assets/imgs/shop/product-4-2.jpg'],
         article: 'Vegetables',
@@ -296,6 +310,7 @@ export class MockData implements InMemoryDbService {
         class: '',
       },
       {
+        id: 15,
         label: '-14%',
         image: [host + '/assets/imgs/shop/product-5-1.jpg', host + '/assets/imgs/shop/product-5-2.jpg'],
         article: 'Pet Foods',
@@ -307,6 +322,7 @@ export class MockData implements InMemoryDbService {
         class: 'best',
       },
       {
+        id: 16,
         label: '',
         image: [host + '/assets/imgs/shop/product-6-1.jpg', host + '/assets/imgs/shop/product-6-2.jpg'],
         article: 'Hodo Foods',
@@ -318,6 +334,7 @@ export class MockData implements InMemoryDbService {
         class: '',
       },
       {
+        id: 17,
         label: '',
         image: [host + '/assets/imgs/shop/product-7-1.jpg', host + '/assets/imgs/shop/product-7-2.jpg'],
         article: 'Meats',
@@ -329,6 +346,7 @@ export class MockData implements InMemoryDbService {
         class: '',
       },
       {
+        id: 18,
         label: 'Sale',
         image: [host + '/assets/imgs/shop/product-8-1.jpg', host + '/assets/imgs/shop/product-8-2.jpg'],
         article: 'Snack',
@@ -340,6 +358,7 @@ export class MockData implements InMemoryDbService {
         class: 'sale',
       },
       {
+        id: 19,
         label: 'Hot',
         image: [host + '/assets/imgs/shop/product-9-1.jpg', host + '/assets/imgs/shop/product-9-2.jpg'],
         article: 'Coffes',
@@ -351,6 +370,7 @@ export class MockData implements InMemoryDbService {
         class: 'hot',
       },
       {
+        id: 20,
         label: '',
         image: [host + '/assets/imgs/shop/product-10-1.jpg', host + '/assets/imgs/shop/product-10-2.jpg'],
         article: 'Cream',
@@ -364,6 +384,7 @@ export class MockData implements InMemoryDbService {
     ];
     let popularProductPet = [
       {
+        id: 21,
         label: 'Hot',
         image: [host + '/assets/imgs/shop/product-11-1.jpg', host + '/assets/imgs/shop/product-11-2.jpg'],
         article: 'Snack',
@@ -375,6 +396,7 @@ export class MockData implements InMemoryDbService {
         class: 'hot',
       },
       {
+        id: 22,
         label: 'Sale',
         image: [host + '/assets/imgs/shop/product-12-1.jpg', host + '/assets/imgs/shop/product-12-2.jpg'],
         article: 'Hodo Foods',
@@ -386,6 +408,7 @@ export class MockData implements InMemoryDbService {
         class: 'sale',
       },
       {
+        id: 23,
         label: 'New',
         image: [host + '/assets/imgs/shop/product-1-1.jpg', host + '/assets/imgs/shop/product-1-2.jpg'],
         article: 'Snack',
@@ -397,6 +420,7 @@ export class MockData implements InMemoryDbService {
         class: 'new',
       },
       {
+        id: 24,
         label: '',
         image: [host + '/assets/imgs/shop/product-14-1.jpg', host + '/assets/imgs/shop/product-14-2.jpg'],
         article: 'Vegetables',
@@ -408,6 +432,7 @@ export class MockData implements InMemoryDbService {
         class: '',
       },
       {
+        id: 25,
         label: '-14%',
         image: [host + '/assets/imgs/shop/product-15-1.jpg', host + '/assets/imgs/shop/product-15-2.jpg'],
         article: 'Pet Foods',
@@ -419,6 +444,7 @@ export class MockData implements InMemoryDbService {
         class: 'best',
       },
       {
+        id: 26,
         label: '',
         image: [host + '/assets/imgs/shop/product-16-1.jpg', host + '/assets/imgs/shop/product-16-2.jpg'],
         article: 'Hodo Foods',
@@ -430,6 +456,7 @@ export class MockData implements InMemoryDbService {
         class: '',
       },
       {
+        id: 27,
         label: '',
         image: [host + '/assets/imgs/shop/product-7-1.jpg', host + '/assets/imgs/shop/product-7-2.jpg'],
         article: 'Meats',
@@ -441,6 +468,7 @@ export class MockData implements InMemoryDbService {
         class: '',
       },
       {
+        id: 28,
         label: 'Sale',
         image: [host + '/assets/imgs/shop/product-8-1.jpg', host + '/assets/imgs/shop/product-8-2.jpg'],
         article: 'Snack',
@@ -452,6 +480,7 @@ export class MockData implements InMemoryDbService {
         class: 'sale',
       },
       {
+        id: 29,
         label: 'Hot',
         image: [host + '/assets/imgs/shop/product-9-1.jpg', host + '/assets/imgs/shop/product-9-2.jpg'],
         article: 'Coffes',
@@ -463,6 +492,7 @@ export class MockData implements InMemoryDbService {
         class: 'hot',
       },
       {
+        id: 30,
         label: '',
         image: [host + '/assets/imgs/shop/product-10-1.jpg', host + '/assets/imgs/shop/product-10-2.jpg'],
         article: 'Cream',
@@ -476,6 +506,7 @@ export class MockData implements InMemoryDbService {
     ];
     let popularProductMeat = [
       {
+        id: 31,
         label: 'Hot',
         image: [host + '/assets/imgs/shop/product-1-1.jpg', host + '/assets/imgs/shop/product-1-2.jpg'],
         article: 'Snack',
@@ -487,6 +518,7 @@ export class MockData implements InMemoryDbService {
         class: 'hot',
       },
       {
+        id: 32,
         label: 'Sale',
         image: [host + '/assets/imgs/shop/product-2-1.jpg', host + '/assets/imgs/shop/product-2-2.jpg'],
         article: 'Hodo Foods',
@@ -498,6 +530,7 @@ export class MockData implements InMemoryDbService {
         class: 'sale',
       },
       {
+        id: 33,
         label: 'New',
         image: [host + '/assets/imgs/shop/product-3-1.jpg', host + '/assets/imgs/shop/product-3-2.jpg'],
         article: 'Snack',
@@ -509,6 +542,7 @@ export class MockData implements InMemoryDbService {
         class: 'new',
       },
       {
+        id: 34,
         label: '',
         image: [host + '/assets/imgs/shop/product-4-1.jpg', host + '/assets/imgs/shop/product-4-2.jpg'],
         article: 'Vegetables',
@@ -520,6 +554,7 @@ export class MockData implements InMemoryDbService {
         class: '',
       },
       {
+        id: 35,
         label: '-14%',
         image: [host + '/assets/imgs/shop/product-5-1.jpg', host + '/assets/imgs/shop/product-5-2.jpg'],
         article: 'Pet Foods',
@@ -531,6 +566,7 @@ export class MockData implements InMemoryDbService {
         class: 'best',
       },
       {
+        id: 36,
         label: '',
         image: [host + '/assets/imgs/shop/product-6-1.jpg', host + '/assets/imgs/shop/product-6-2.jpg'],
         article: 'Hodo Foods',
@@ -542,6 +578,7 @@ export class MockData implements InMemoryDbService {
         class: '',
       },
       {
+        id: 37,
         label: '',
         image: [host + '/assets/imgs/shop/product-7-1.jpg', host + '/assets/imgs/shop/product-7-2.jpg'],
         article: 'Meats',
@@ -553,6 +590,7 @@ export class MockData implements InMemoryDbService {
         class: '',
       },
       {
+        id: 38,
         label: 'Sale',
         image: [host + '/assets/imgs/shop/product-8-1.jpg', host + '/assets/imgs/shop/product-8-2.jpg'],
         article: 'Snack',
@@ -564,6 +602,7 @@ export class MockData implements InMemoryDbService {
         class: 'sale',
       },
       {
+        id: 39,
         label: 'Hot',
         image: [host + '/assets/imgs/shop/product-9-1.jpg', host + '/assets/imgs/shop/product-9-2.jpg'],
         article: 'Coffes',
@@ -575,6 +614,7 @@ export class MockData implements InMemoryDbService {
         class: 'hot',
       },
       {
+        id: 40,
         label: '',
         image: [host + '/assets/imgs/shop/product-10-1.jpg', host + '/assets/imgs/shop/product-10-2.jpg'],
         article: 'Cream',
@@ -588,6 +628,7 @@ export class MockData implements InMemoryDbService {
     ];
     let popularProductVegetable = [
       {
+        id: 41,
         label: 'Hot',
         image: [host + '/assets/imgs/shop/product-11-1.jpg', host + '/assets/imgs/shop/product-11-2.jpg'],
         article: 'Snack',
@@ -599,6 +640,7 @@ export class MockData implements InMemoryDbService {
         class: 'hot',
       },
       {
+        id: 42,
         label: 'Sale',
         image: [host + '/assets/imgs/shop/product-12-1.jpg', host + '/assets/imgs/shop/product-12-2.jpg'],
         article: 'Hodo Foods',
@@ -610,6 +652,7 @@ export class MockData implements InMemoryDbService {
         class: 'sale',
       },
       {
+        id: 43,
         label: 'New',
         image: [host + '/assets/imgs/shop/product-1-1.jpg', host + '/assets/imgs/shop/product-1-2.jpg'],
         article: 'Snack',
@@ -621,6 +664,7 @@ export class MockData implements InMemoryDbService {
         class: 'new',
       },
       {
+        id: 44,
         label: '',
         image: [host + '/assets/imgs/shop/product-14-1.jpg', host + '/assets/imgs/shop/product-14-2.jpg'],
         article: 'Vegetables',
@@ -632,6 +676,7 @@ export class MockData implements InMemoryDbService {
         class: '',
       },
       {
+        id: 45,
         label: '-14%',
         image: [host + '/assets/imgs/shop/product-15-1.jpg', host + '/assets/imgs/shop/product-15-2.jpg'],
         article: 'Pet Foods',
@@ -643,6 +688,7 @@ export class MockData implements InMemoryDbService {
         class: 'best',
       },
       {
+        id: 46,
         label: '',
         image: [host + '/assets/imgs/shop/product-16-1.jpg', host + '/assets/imgs/shop/product-16-2.jpg'],
         article: 'Hodo Foods',
@@ -654,6 +700,7 @@ export class MockData implements InMemoryDbService {
         class: '',
       },
       {
+        id: 47,
         label: '',
         image: [host + '/assets/imgs/shop/product-7-1.jpg', host + '/assets/imgs/shop/product-7-2.jpg'],
         article: 'Meats',
@@ -665,6 +712,7 @@ export class MockData implements InMemoryDbService {
         class: '',
       },
       {
+        id: 48,
         label: 'Sale',
         image: [host + '/assets/imgs/shop/product-8-1.jpg', host + '/assets/imgs/shop/product-8-2.jpg'],
         article: 'Snack',
@@ -676,6 +724,7 @@ export class MockData implements InMemoryDbService {
         class: 'sale',
       },
       {
+        id: 49,
         label: 'Hot',
         image: [host + '/assets/imgs/shop/product-9-1.jpg', host + '/assets/imgs/shop/product-9-2.jpg'],
         article: 'Coffes',
@@ -687,6 +736,7 @@ export class MockData implements InMemoryDbService {
         class: 'hot',
       },
       {
+        id: 50,
         label: '',
         image: [host + '/assets/imgs/shop/product-10-1.jpg', host + '/assets/imgs/shop/product-10-2.jpg'],
         article: 'Cream',
@@ -700,6 +750,7 @@ export class MockData implements InMemoryDbService {
     ];
     let popularProductFruit = [
       {
+        id: 51,
         label: 'Hot',
         image: [host + '/assets/imgs/shop/product-1-1.jpg', host + '/assets/imgs/shop/product-1-2.jpg'],
         article: 'Snack',
@@ -711,6 +762,7 @@ export class MockData implements InMemoryDbService {
         class: 'hot',
       },
       {
+        id: 52,
         label: 'Sale',
         image: [host + '/assets/imgs/shop/product-2-1.jpg', host + '/assets/imgs/shop/product-2-2.jpg'],
         article: 'Hodo Foods',
@@ -722,6 +774,7 @@ export class MockData implements InMemoryDbService {
         class: 'sale',
       },
       {
+        id: 53,
         label: 'New',
         image: [host + '/assets/imgs/shop/product-3-1.jpg', host + '/assets/imgs/shop/product-3-2.jpg'],
         article: 'Snack',
@@ -733,6 +786,7 @@ export class MockData implements InMemoryDbService {
         class: 'new',
       },
       {
+        id: 54,
         label: '',
         image: [host + '/assets/imgs/shop/product-4-1.jpg', host + '/assets/imgs/shop/product-4-2.jpg'],
         article: 'Vegetables',
@@ -744,6 +798,7 @@ export class MockData implements InMemoryDbService {
         class: '',
       },
       {
+        id: 55,
         label: '-14%',
         image: [host + '/assets/imgs/shop/product-5-1.jpg', host + '/assets/imgs/shop/product-5-2.jpg'],
         article: 'Pet Foods',
@@ -755,6 +810,7 @@ export class MockData implements InMemoryDbService {
         class: 'best',
       },
       {
+        id: 56,
         label: '',
         image: [host + '/assets/imgs/shop/product-6-1.jpg', host + '/assets/imgs/shop/product-6-2.jpg'],
         article: 'Hodo Foods',
@@ -766,6 +822,7 @@ export class MockData implements InMemoryDbService {
         class: '',
       },
       {
+        id: 57,
         label: '',
         image: [host + '/assets/imgs/shop/product-7-1.jpg', host + '/assets/imgs/shop/product-7-2.jpg'],
         article: 'Meats',
@@ -777,6 +834,7 @@ export class MockData implements InMemoryDbService {
         class: '',
       },
       {
+        id: 58,
         label: 'Sale',
         image: [host + '/assets/imgs/shop/product-8-1.jpg', host + '/assets/imgs/shop/product-8-2.jpg'],
         article: 'Snack',
@@ -788,6 +846,7 @@ export class MockData implements InMemoryDbService {
         class: 'sale',
       },
       {
+        id: 59,
         label: 'Hot',
         image: [host + '/assets/imgs/shop/product-9-1.jpg', host + '/assets/imgs/shop/product-9-2.jpg'],
         article: 'Coffes',
@@ -799,6 +858,7 @@ export class MockData implements InMemoryDbService {
         class: 'hot',
       },
       {
+        id: 60,
         label: '',
         image: [host + '/assets/imgs/shop/product-10-1.jpg', host + '/assets/imgs/shop/product-10-2.jpg'],
         article: 'Cream',

@@ -79,6 +79,7 @@ export class PopularProductComponent implements OnInit, OnDestroy {
   getMessage() {
     return this.store.dispatch(new GetInfoMessage());
   }
+
   addToCard(payload: any) {
     this.cardItem = payload;
 
@@ -93,7 +94,7 @@ export class PopularProductComponent implements OnInit, OnDestroy {
 
     return this.store.dispatch(new AddCard(fillPayload)).subscribe(() => {
       this.messages$?.subscribe((res) => {
-        console.log(res);
+        //console.log(res);
         this.infoMessage = res[0].cardAddedSuccess;
       });
       this.success = this.toastrService.success(this.infoMessage);

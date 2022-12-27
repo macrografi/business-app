@@ -46,7 +46,7 @@ export class CardState {
   }
 
   @Action(DeleteCard)
-  deleteTodo({ getState, setState }: StateContext<CardStateModel>, { id }: DeleteCard) {
+  deleteCard({ getState, setState }: StateContext<CardStateModel>, { id }: DeleteCard) {
     return this.cardService.deleteCard(id).pipe(
       tap(() => {
         const state = getState();
