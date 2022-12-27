@@ -15,7 +15,8 @@ import { InfoMessageState } from '../../../state/info-message.state';
 })
 export class HeaderMiddleComponent implements OnInit {
   totalPrice?: any = 0;
-  isLength?: boolean = false;
+  totalCount?: number = 0;
+
   public config: PerfectScrollbarConfigInterface = {};
 
   constructor(private store: Store) {}
@@ -29,11 +30,7 @@ export class HeaderMiddleComponent implements OnInit {
       val.forEach((value: any, key: any) => {
         return priceArray.push(value.price);
       });
-
-      if (val.length > 0) {
-        this.isLength = true;
-      }
-
+      this.totalCount = val.length;
       this.totalPrice = priceArray.reduce((acc, val) => {
         return parseFloat((acc + val).toFixed(2));
       }, 0);
