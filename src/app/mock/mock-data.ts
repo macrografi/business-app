@@ -22,6 +22,24 @@ export class MockData implements InMemoryDbService {
         completed: false,
       },
     ];
+    let wishes = [
+      {
+        userId: 1,
+        id: 1,
+        description: 'Seeds of Change Organic Quinoa, Brown, & Red Rice',
+        image: [host + '/assets/imgs/shop/product-11-1.jpg', host + '/assets/imgs/shop/product-11-2.jpg'],
+        price: 28.85,
+        completed: false,
+      },
+      {
+        userId: 1,
+        id: 2,
+        description: 'All Natural Italian-Style Chicken Meatballs',
+        image: [host + '/assets/imgs/shop/product-11-1.jpg', host + '/assets/imgs/shop/product-11-2.jpg'],
+        price: 28.85,
+        completed: false,
+      },
+    ];
     let carouselDetails = [
       {
         description: 'Banner 1 Desc',
@@ -1464,6 +1482,7 @@ export class MockData implements InMemoryDbService {
       headerTopSmartMenu: headerTopMenu,
       headerTopInfoMessage: headerTopInfo,
       card: cards,
+      wish: wishes,
       messages: cardMessages,
     };
   }

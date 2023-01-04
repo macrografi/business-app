@@ -27,7 +27,7 @@ import { ContentLayoutComponent } from './layout/content-layout/content-layout.c
 import { Error404Component } from './pages/error-pages/error-404/error-404.component';
 import { Error403Component } from './pages/error-pages/error-403/error-403.component';
 import { SharedModule } from './pages/shared.module';
-
+import { WishState } from './state/wish.state';
 
 @NgModule({
   declarations: [AppComponent, FullLayoutComponent, ContentLayoutComponent, Error404Component, Error403Component],
@@ -48,13 +48,14 @@ import { SharedModule } from './pages/shared.module';
       HeaderTopMenuState,
       HeaderTopInfoState,
       CardState,
+      WishState,
       InfoMessageState,
     ]),
     NgxsDispatchPluginModule.forRoot(),
     NgxsReduxDevtoolsPluginModule.forRoot(),
     NgxsLoggerPluginModule.forRoot(),
     InMemoryWebApiModule.forRoot(MockData),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

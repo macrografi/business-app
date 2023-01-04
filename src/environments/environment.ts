@@ -23,4 +23,5 @@ export const environment = {
   headerTopInfoMessage: '/api/headerTopInfoMessage',
   card: '/api/card',
   messages: '/api/messages',
+  wish: '/api/wish',
 };

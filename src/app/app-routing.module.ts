@@ -12,7 +12,8 @@ import { ContentLayoutComponent } from './layout/content-layout/content-layout.c
 import { FullLayoutComponent } from './layout/full-layout/full-layout.component';
 
 const appRoutes: Routes = [
-/*  {
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  {
     path: 'error/400',
     component: Error400Component,
     data: { title: 'Not Authorized', moduleId: 0 },
@@ -21,7 +22,7 @@ const appRoutes: Routes = [
     path: 'error/401',
     component: Error401Component,
     data: { title: 'Not Found', moduleId: 0 },
-  },*/
+  },
   {
     path: 'error/403',
     component: Error403Component,
@@ -32,11 +33,11 @@ const appRoutes: Routes = [
     component: Error404Component,
     data: { title: 'Not Found', moduleId: 0 },
   },
-/*  {
+  {
     path: 'error/500',
     component: Error500Component,
     data: { title: 'Not Found', moduleId: 0 },
-  },*/
+  },
   {
     path: '',
     component: ContentLayoutComponent,

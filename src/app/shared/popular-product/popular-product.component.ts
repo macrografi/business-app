@@ -17,6 +17,9 @@ import { Card } from '../../model/card';
 import { ToastrService } from 'ngx-toastr';
 import { InfoMessageState } from '../../state/info-message.state';
 import { GetInfoMessage } from '../../action/info-message.action';
+import { Wish } from '../../model/wish';
+import { WishState } from '../../state/wish.state';
+import { AddWish } from '../../action/wish.action';
 
 @Component({
   selector: 'app-popular-product',
@@ -26,6 +29,7 @@ import { GetInfoMessage } from '../../action/info-message.action';
 })
 export class PopularProductComponent implements OnInit, OnDestroy {
   private cardItem: any;
+  private wishItem: any;
   private success: any;
   private infoMessage: any;
 
@@ -41,6 +45,7 @@ export class PopularProductComponent implements OnInit, OnDestroy {
   @Select(PopularProductState.getProductVegetablesList) vegetables$: Observable<any> | undefined;
   @Select(PopularProductState.getProductFruitsList) fruits$: Observable<any> | undefined;
   @Select(CardState.getCardList) cards$: Observable<Card> | any;
+  @Select(WishState.getWishList) wishes$: Observable<Wish> | any;
 
   selectTab(tabId: number) {
     if (this.staticTabs?.tabs[tabId]) {
@@ -99,6 +104,20 @@ export class PopularProductComponent implements OnInit, OnDestroy {
       });
       this.success = this.toastrService.success(this.infoMessage);
     });
+  }
+  addToWishList(payload: any) {
+    this.wishItem = payload;
+
+    const fillPayload = {
+      userId: this.wishItem.item.userId,
+      id: this.wishItem.item.id,
+      description: this.wishItem.item.description,
+      image: this.wishItem.item.image,
+      price: this.wishItem.item.price,
+      completed: false,
+    };
+
+    return this.store.dispatch(new AddWish(fillPayload)).subscribe(() => {});
   }
   ngOnDestroy(): void {}
 }
