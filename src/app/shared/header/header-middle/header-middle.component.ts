@@ -43,9 +43,7 @@ export class HeaderMiddleComponent implements OnInit {
     });
 
     this.wishes$?.subscribe((val) => {
-
       this.totalWishListCount = val.length;
-      console.log(this.totalWishListCount);
     });
   }
 

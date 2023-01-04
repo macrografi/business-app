@@ -117,7 +117,13 @@ export class PopularProductComponent implements OnInit, OnDestroy {
       completed: false,
     };
 
-    return this.store.dispatch(new AddWish(fillPayload)).subscribe(() => {});
+    return this.store.dispatch(new AddWish(fillPayload)).subscribe(() => {
+      this.messages$?.subscribe((res) => {
+        //console.log(res);
+        this.infoMessage = res[0].wishlistSuccess;
+      });
+      this.success = this.toastrService.success(this.infoMessage);
+    });
   }
   ngOnDestroy(): void {}
 }

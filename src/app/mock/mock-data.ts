@@ -1457,6 +1457,8 @@ export class MockData implements InMemoryDbService {
       {
         cardAddedSuccess: 'card added',
         cardAddedFail: '!failed',
+        wishlistSuccess: 'wish list added',
+        wishlistFail: '!failed',
       },
     ];
 
