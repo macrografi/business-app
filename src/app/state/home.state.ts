@@ -2,8 +2,8 @@ import { Action, Selector, State, StateContext } from '@ngxs/store';
 import { CarouselDefault } from '../default/carousel.default';
 import { GetCarousel } from '../action/carousel.action';
 import { tap } from 'rxjs/operators';
-import { MockCarouselService } from '../service/mock-carousel.service';
 import { Injectable } from '@angular/core';
+import {CarouselService} from "../service";
 
 @State<CarouselDefault>({
   name: 'carousels',
@@ -13,7 +13,7 @@ import { Injectable } from '@angular/core';
 })
 @Injectable()
 export class HomeState {
-  constructor(private carouselService: MockCarouselService) {}
+  constructor(private carouselService: CarouselService) {}
 
   @Selector() static getBannerList(state: CarouselDefault) {
     return state.carousels;

@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { DealsDayDefault } from '../default/deals-day.default';
 import { getDealsDayAction } from '../action/deals-day.action';
 import { tap } from 'rxjs/operators';
-import { MockDealsDayService } from '../service/mock-deals-day.service';
+import { DealsDayService } from '../service/deals-day.service';
 
 @State<DealsDayDefault>({
   name: 'dealsDay',
@@ -13,7 +13,7 @@ import { MockDealsDayService } from '../service/mock-deals-day.service';
 })
 @Injectable()
 export class DealsDayState {
-  constructor(private mockDealsDayService: MockDealsDayService) {}
+  constructor(private mockDealsDayService: DealsDayService) {}
 
   @Selector() static getDealsList(state: DealsDayDefault) {
     return state.dealsDays;

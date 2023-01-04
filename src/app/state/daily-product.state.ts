@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { MockDailyProductService } from '../service/mock-daily-product.service';
+import { DailyProductService } from '../service/daily-product.service';
 import { Action, Selector, State, StateContext } from '@ngxs/store';
 import { PopularProductMilkDefault } from '../default/popular-product.default';
 import {
@@ -35,7 +35,7 @@ import {
 })
 @Injectable()
 export class DailyProductState {
-  constructor(private mockDailyProductService: MockDailyProductService) {}
+  constructor(private mockDailyProductService: DailyProductService) {}
 
   @Selector() static getProductFeaturedList(state: DailyProductFeaturedDefault) {
     return state.dailyProductFeatured;

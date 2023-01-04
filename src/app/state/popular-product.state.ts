@@ -16,7 +16,7 @@ import {
   GetPopularProductVegetable,
 } from '../action/popular-product.action';
 import { tap } from 'rxjs/operators';
-import { MockPopularProductService } from '../service/mock-popular-product.service';
+import { PopularProductService } from '../service/popular-product.service';
 import { Injectable } from '@angular/core';
 
 @State<PopularProductMilkDefault>({
@@ -57,7 +57,7 @@ import { Injectable } from '@angular/core';
 })
 @Injectable()
 export class PopularProductState {
-  constructor(private mockPopularProductService: MockPopularProductService) {}
+  constructor(private mockPopularProductService: PopularProductService) {}
 
   @Selector() static getProductMilksList(state: PopularProductMilkDefault) {
     return state.popularProductsMilk;

@@ -2,7 +2,7 @@ import { Action, Selector, State, StateContext } from '@ngxs/store';
 import { FeatureCarouselDefault } from '../default/features-carousel.default';
 import { getFeatureCarousels } from '../action/features-carousel.action';
 import { tap } from 'rxjs/operators';
-import { MockFeaturesCarouselService } from '../service/mock-features-carousel.service';
+import { FeaturesCarouselService } from '../service/features-carousel.service';
 import { Injectable } from '@angular/core';
 
 @State<FeatureCarouselDefault>({
@@ -13,7 +13,7 @@ import { Injectable } from '@angular/core';
 })
 @Injectable()
 export class FeatureState {
-  constructor(private mockFeaturesCarouselService: MockFeaturesCarouselService) {}
+  constructor(private mockFeaturesCarouselService: FeaturesCarouselService) {}
 
   @Selector() static getFeatureList(state: FeatureCarouselDefault) {
     return state.featureCarousels;

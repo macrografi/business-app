@@ -7,7 +7,7 @@ import { DailyProduct } from '../model/daily-product';
 @Injectable({
   providedIn: 'root',
 })
-export class MockDailyProductService {
+export class DailyProductService {
   constructor(private http: HttpClient) {}
 
   private dailyFeaturedProduct = `${environment.dailyFeaturedProduct}`;
