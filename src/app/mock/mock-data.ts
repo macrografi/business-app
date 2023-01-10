@@ -1191,6 +1191,7 @@ export class MockData implements InMemoryDbService {
         text: 'Home',
         value: '#1',
         subMenu: [],
+        link: '/home',
       },
       {
         icon: 'fi-rs-angle-down',
@@ -1200,28 +1201,35 @@ export class MockData implements InMemoryDbService {
           {
             text: 'Meat & Poultry',
             value: '#1',
+            link: '',
           },
           {
             text: 'Fresh Vegetables',
             value: '#2',
+            link: '',
           },
           {
             text: 'Herbs & Seasonings',
             value: '#3',
+            link: '',
           },
           {
             text: 'Cuts & Sprouts',
             value: '#4',
+            link: '',
           },
           {
             text: 'Exotic Fruits & Veggies',
             value: '#5',
+            link: '',
           },
           {
             text: 'Packaged Produce',
             value: '#6',
+            link: '',
           },
         ],
+        link: '',
       },
       {
         icon: 'fi-rs-angle-down',
@@ -1231,28 +1239,35 @@ export class MockData implements InMemoryDbService {
           {
             text: 'Milk & Flavoured Milk',
             value: '#1',
+            link: '',
           },
           {
             text: 'Butter and Margarine',
             value: '#2',
+            link: '',
           },
           {
             text: 'Eggs Substitutes',
             value: '#3',
+            link: '',
           },
           {
             text: 'Marmalades',
             value: '#4',
+            link: '',
           },
           {
             text: 'Sour Cream',
             value: '#5',
+            link: '',
           },
           {
             text: 'Cheese',
             value: '#6',
+            link: '',
           },
         ],
+        link: '',
       },
       {
         icon: 'fi-rs-angle-down',
@@ -1284,18 +1299,21 @@ export class MockData implements InMemoryDbService {
             value: '#6',
           },
         ],
+        link: '',
       },
       {
         icon: '',
         text: 'Blog',
         value: '#1',
         subMenu: [],
+        link: '/blog',
       },
       {
         icon: '',
         text: 'Contact',
         value: '#1',
         subMenu: [],
+        link: '/contact',
       },
     ];
     let footerMenu = [

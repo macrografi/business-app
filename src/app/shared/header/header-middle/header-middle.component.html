@@ -46,11 +46,11 @@
               </form>
             </div>
             <div class="header-action-icon-2">
-              <a href="shop-compare.html">
+              <a href="#">
                 <img class="svgInject" alt="Nest" src="assets/imgs/theme/icons/icon-compare.svg" />
                 <span class="pro-count blue">3</span>
               </a>
-              <a href="shop-compare.html"><span class="lable ml-0">Compare</span></a>
+              <a href="#"><span class="lable ml-0">Compare</span></a>
             </div>
             <div class="header-action-icon-2">
               <a>
@@ -58,16 +58,15 @@
                 <div *ngIf="wishes$ | async as wishes">
                   <span *ngIf="totalWishListCount != 0" class="pro-count blue">{{ totalWishListCount }}</span>
                 </div>
-
               </a>
-              <a href="shop-wishlist.html"><span class="lable">Wishlist</span></a>
+              <a href="#"><span class="lable">Wishlist</span></a>
             </div>
             <div class="header-action-icon-2">
-              <a class="mini-cart-icon">
+              <a routerLink="/cart" class="mini-cart-icon">
                 <img alt="Nest" src="assets/imgs/theme/icons/icon-cart.svg" />
                 <span *ngIf="totalCount != 0" class="pro-count blue">{{ totalCount }}</span>
               </a>
-              <a><span class="lable">Cart</span></a>
+              <a routerLink="/cart"><span class="lable">Cart</span></a>
               <div
                 *ngIf="cards$ | async as cards"
                 class="cart-dropdown-wrap cart-dropdown-hm2"
@@ -102,7 +101,7 @@
                     </h4>
                   </div>
                   <div class="shopping-cart-button">
-                    <a class="outline">View cart</a>
+                    <a routerLink="/cart" class="outline">View cart</a>
                     <a>Checkout</a>
                   </div>
                 </div>

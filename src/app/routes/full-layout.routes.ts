@@ -12,4 +12,11 @@ export const Full_ROUTES: Routes = [
         (m) => m.ContactModule
       ),
   },
+  {
+    path: '',
+    loadChildren: () =>
+      import('../pages/cart/cart.module').then(
+        (m) => m.CartModule
+      ),
+  },
 ];

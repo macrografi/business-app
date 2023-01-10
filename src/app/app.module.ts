@@ -53,7 +53,6 @@ import { WishState } from './state/wish.state';
     ]),
     NgxsDispatchPluginModule.forRoot(),
     NgxsReduxDevtoolsPluginModule.forRoot(),
-    NgxsLoggerPluginModule.forRoot(),
     InMemoryWebApiModule.forRoot(MockData),
     BrowserAnimationsModule,
   ],
