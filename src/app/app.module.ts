@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { NgxsModule } from '@ngxs/store';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
-import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
 import { HomeState } from './state/home.state';
 import { HttpClientModule } from '@angular/common/http';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
@@ -28,6 +27,7 @@ import { Error404Component } from './pages/error-pages/error-404/error-404.compo
 import { Error403Component } from './pages/error-pages/error-403/error-403.component';
 import { SharedModule } from './pages/shared.module';
 import { WishState } from './state/wish.state';
+import {NgxsStoragePluginModule} from "@ngxs/storage-plugin";
 
 @NgModule({
   declarations: [AppComponent, FullLayoutComponent, ContentLayoutComponent, Error404Component, Error403Component],
@@ -53,6 +53,9 @@ import { WishState } from './state/wish.state';
     ]),
     NgxsDispatchPluginModule.forRoot(),
     NgxsReduxDevtoolsPluginModule.forRoot(),
+    NgxsStoragePluginModule.forRoot({
+      key: 'auth.token',
+    }),
     InMemoryWebApiModule.forRoot(MockData),
     BrowserAnimationsModule,
   ],
