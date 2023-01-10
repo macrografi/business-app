@@ -27,7 +27,10 @@ import { Error404Component } from './pages/error-pages/error-404/error-404.compo
 import { Error403Component } from './pages/error-pages/error-403/error-403.component';
 import { SharedModule } from './pages/shared.module';
 import { WishState } from './state/wish.state';
-import {NgxsStoragePluginModule} from "@ngxs/storage-plugin";
+import { NgxsStoragePluginModule } from '@ngxs/storage-plugin';
+import { AuthGuard } from './guards/auth.guard';
+import {AuthService} from "./service/auth.service";
+import {AuthState} from "./state/auth.state";
 
 @NgModule({
   declarations: [AppComponent, FullLayoutComponent, ContentLayoutComponent, Error404Component, Error403Component],
@@ -37,6 +40,7 @@ import {NgxsStoragePluginModule} from "@ngxs/storage-plugin";
     SharedModule,
     HttpClientModule,
     NgxsModule.forRoot([
+      AuthState,
       HomeState,
       FeatureState,
       PopularProductState,
@@ -59,7 +63,7 @@ import {NgxsStoragePluginModule} from "@ngxs/storage-plugin";
     InMemoryWebApiModule.forRoot(MockData),
     BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [AuthGuard, AuthService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
