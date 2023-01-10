@@ -24,4 +24,5 @@ export const environment = {
   card: '/api/card',
   messages: '/api/messages',
   wish: '/api/wish',
+  user: '/api/user',
 };

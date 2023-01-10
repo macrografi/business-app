@@ -4,6 +4,11 @@ let host = `${window.location.protocol}//${window.location.host}`;
 export class MockData implements InMemoryDbService {
   createDb() {
     //JSON data
+    let userDetails = [
+      {
+        token: 'token-abscess',
+      },
+    ];
     let cards = [
       {
         userId: 1,
@@ -1504,6 +1509,7 @@ export class MockData implements InMemoryDbService {
       card: cards,
       wish: wishes,
       messages: cardMessages,
+      user: userDetails,
     };
   }
 }
