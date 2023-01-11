@@ -50,10 +50,10 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     FooterBottomComponent,
   ],
   imports: [
+    CommonModule,
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
-    CommonModule,
     SwiperModule,
     ToastrModule.forRoot({
       timeOut: 1000,

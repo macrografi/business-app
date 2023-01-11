@@ -29,8 +29,8 @@ import { SharedModule } from './pages/shared.module';
 import { WishState } from './state/wish.state';
 import { NgxsStoragePluginModule } from '@ngxs/storage-plugin';
 import { AuthGuard } from './guards/auth.guard';
-import {AuthService} from "./service/auth.service";
-import {AuthState} from "./state/auth.state";
+import { AuthService } from './service/auth.service';
+import { AuthState } from './state/auth.state';
 
 @NgModule({
   declarations: [AppComponent, FullLayoutComponent, ContentLayoutComponent, Error404Component, Error403Component],
