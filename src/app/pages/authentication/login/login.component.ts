@@ -42,11 +42,10 @@ export class LoginComponent implements OnInit {
     }
 
     this.store.dispatch(new Login(payload)).subscribe({
-      next: (val) => {
-        console.log(val);
+      next: (res) => {
         const returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
         this.router.navigateByUrl(returnUrl).then((r) => {
-          this.toastrService.success('Welcome', 'Success!');
+          this.toastrService.success(res.auth.username, 'Welcome');
         });
       },
       error: (error: any) => {

@@ -6,6 +6,7 @@ export class MockData implements InMemoryDbService {
     //JSON data
     let userDetails = [
       {
+        user: 'cenk',
         token: 'token-abscess',
       },
     ];
