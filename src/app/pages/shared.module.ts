@@ -17,8 +17,8 @@ import {
   PerfectScrollbarConfigInterface,
   PerfectScrollbarModule,
 } from 'ngx-perfect-scrollbar';
-import {SwiperModule} from "swiper/angular";
-import {TabsModule} from "ngx-bootstrap/tabs";
+import { SwiperModule } from 'swiper/angular';
+import { TabsModule } from 'ngx-bootstrap/tabs';
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
 };
